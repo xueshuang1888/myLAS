@@ -25,7 +25,7 @@ under the License.
 
  <condition property="javaatleast18">
   <not>
-   <matches pattern="^1\.[0-7]($|\..*)" string="${ant.java.version}"/>
+   <matches pattern="^1\.[0-6]($|\..*)" string="${ant.java.version}"/>
   </not>
  </condition>
  <fail unless="javaatleast18" message="Please upgrade java to at least 1.8. Current Java version is ${ant.java.version}"/>
@@ -72,7 +72,7 @@ under the License.
  </presetdef>
 
  <presetdef name="javac18">
-  <default-javac compiler="javac1.8" target="1.8" source="1.8" encoding="UTF-8" includeantruntime="false">
+  <default-javac compiler="javac1.7" target="1.7" source="1.7" encoding="UTF-8" includeantruntime="false">
    <compilerarg value="-Xlint:-path"/>
    <!--
    Please leave this line here.  It makes it easier to enable/disable it.
