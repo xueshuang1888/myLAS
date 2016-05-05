@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <SecurityGroupPermission groupId="FULLADMIN" permissionId="ACTIVITI_ADMIN"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="ACTIVITI_CREATE"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="ACTIVITI_DELETE"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="ACTIVITI_UPDATE"/>
+    <SecurityGroupPermission groupId="FLEXADMIN" permissionId="ACTIVITI_VIEW"/>
+    <SecurityGroupPermission groupId="VIEWADMIN" permissionId="ACTIVITI_VIEW"/>
+    <SecurityGroupPermission groupId="BIZADMIN" permissionId="ACTIVITI_ADMIN"/>
+</entity-engine-xml>
