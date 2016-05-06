@@ -23,66 +23,70 @@ under the License.
 <#assign contextPath = request.getContextPath()>
 <#assign displayApps = Static["org.ofbiz.webapp.control.LoginWorker"].getAppBarWebInfos(security, userLogin, ofbizServerName, "main")>
 <#assign displaySecondaryApps = Static["org.ofbiz.webapp.control.LoginWorker"].getAppBarWebInfos(security, userLogin, ofbizServerName, "secondary")>
-
+<div>
+	<script type="text/javascript">
+		 
+		$(document).ready(function(){
+			$("#secondaryAppBarLi").on("mouseover",function(){
+				$($(this).find("ul")[0]).show();
+			});
+			
+			$("#secondaryAppBarLi").on("mouseout",function(){
+				$($(this).find("ul")[0]).hide();
+			}); 
+		});
+		
+	</script>
+</div>
 <#if userLogin?has_content>
   <div id="main-navigation">
     <ul>
       <#assign appCount = 0>
       <#assign firstApp = true>
-      <#list displayApps as display>
-        <#assign thisApp = display.getContextRoot()>
-        <#assign selected = false>
-        <#if thisApp == contextPath || contextPath + "/" == thisApp>
-          <#assign selected = true>
-        </#if>
-        <#assign servletPath = Static["org.ofbiz.webapp.WebAppUtil"].getControlServletPath(display)>
-        <#assign thisURL = StringUtil.wrapString(servletPath)>
-        <#if thisApp != "/">
-          <#assign thisURL = thisURL + "main">
-        </#if>
-        <#if layoutSettings.suppressTab?? && display.name == layoutSettings.suppressTab>
-          <#-- do not display this component-->
-        <#else>
-          <#if appCount % 4 == 0>
-            <#if firstApp>
-              <li class="first">
-              <#assign firstApp = false>
-            <#else>
-              </li>
-              <li>
-            </#if>
-          </#if>
-          <a href="${thisURL}${StringUtil.wrapString(externalKeyParam)}"<#if selected> class="selected"</#if><#if uiLabelMap??> title="${uiLabelMap[display.description]}">${uiLabelMap[display.title]}<#else> title="${display.description}">${display.title}</#if></a>
-          <#assign appCount = appCount + 1>
-        </#if>
-      </#list>
-      <#list displaySecondaryApps as display>
-        <#assign thisApp = display.getContextRoot()>
-        <#assign selected = false>
-        <#if thisApp == contextPath || contextPath + "/" == thisApp>
-          <#assign selected = true>
-        </#if>
-          <#assign servletPath = Static["org.ofbiz.webapp.WebAppUtil"].getControlServletPath(display)>
-          <#assign thisURL = StringUtil.wrapString(servletPath)>
-          <#if thisApp != "/">
-            <#assign thisURL = thisURL + "main">
-          </#if>
-        <#if appCount % 4 == 0>
-          <#if firstApp>
-            <li class="first">
-            <#assign firstApp = false>
-          <#else>
-            </li>
-            <li>
-          </#if>
-        </#if>
-        <a href="${thisURL}${StringUtil.wrapString(externalKeyParam)}"<#if selected> class="selected"</#if><#if uiLabelMap??> title="${uiLabelMap[display.description]}">${uiLabelMap[display.title]}<#else> title="${display.description}">${display.title}</#if></a>
-        <#assign appCount = appCount + 1>
-      </#list>
-      <#if appCount != 0>
-        </li>
-        <li class="last"></li>
-      </#if>
+	  
+			<#list displayApps as display>
+				<#assign thisApp = display.getContextRoot()>
+				<#assign selected = false>
+				<#if thisApp == contextPath || contextPath + "/" == thisApp>
+				  <#assign selected = true>
+				</#if>
+				<#assign servletPath = Static["org.ofbiz.webapp.WebAppUtil"].getControlServletPath(display)>
+				<#assign thisURL = StringUtil.wrapString(servletPath)>
+				<#if thisApp != "/">
+				  <#assign thisURL = thisURL + "main">
+				</#if>
+				<#if layoutSettings.suppressTab?? && display.name == layoutSettings.suppressTab>
+				  <#-- do not display this component-->
+				<#else>
+				<li>
+				  <a href="${thisURL}${StringUtil.wrapString(externalKeyParam)}"<#if selected> class="selected"</#if><#if uiLabelMap??> title="${uiLabelMap[display.description]}">${uiLabelMap[display.title]}<#else> title="${display.description}">${display.title}</#if></a>
+				</li>
+				</#if>
+			</#list>
+		
+	  <li id="secondaryAppBarLi">
+		<a href="javascript:void(0);">其他</a>
+		<ul class="secondary">
+			<#list displaySecondaryApps as display>
+				<#assign thisApp = display.getContextRoot()>
+				<#assign selected = false>
+				<#if thisApp == contextPath || contextPath + "/" == thisApp>
+				  <#assign selected = true>
+				</#if>
+				  <#assign servletPath = Static["org.ofbiz.webapp.WebAppUtil"].getControlServletPath(display)>
+				  <#assign thisURL = StringUtil.wrapString(servletPath)>
+				  <#if thisApp != "/">
+					<#assign thisURL = thisURL + "main">
+				  </#if>
+				   <li>
+					<a href="${thisURL}${StringUtil.wrapString(externalKeyParam)}"<#if selected> class="selected"</#if><#if uiLabelMap??> title="${uiLabelMap[display.description]}">${uiLabelMap[display.title]}<#else> title="${display.description}">${display.title}</#if></a>
+				   </li>
+			</#list>
+		</ul>
+	  </li>
+	  
+	  
     </ul>
   </div>
 </#if>
+<div style="margin-top:2px;margin-left:0px;">

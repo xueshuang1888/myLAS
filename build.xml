@@ -106,7 +106,7 @@ under the License.
             <fileset dir="framework/base/lib" includes="sonar-*.jar"/>
             <fileset dir="framework/base/lib" includes="activemq-*.jar"/>
             <fileset dir="framework/entity/lib/jdbc" includes="postgresql-*.jar"/>
-            <fileset dir="framework/entity/lib/jdbc" includes="mysql-*.jar"/>
+            <!--<fileset dir="framework/entity/lib/jdbc" includes="mysql-*.jar"/>-->
         </delete>
         <antcall target="clean-ivy"/>
     </target>
@@ -588,6 +588,7 @@ under the License.
         <java jar="ofbiz.jar" fork="true">
             <jvmarg value="${memory.initial.param}"/>
             <jvmarg value="${memory.max.param}"/>
+        	<jvmarg value="-Dfile.encoding=UTF-8"/>
             <arg value="start"/>
             <arg value="-portoffset=${portoffset}"/>
         </java>
@@ -636,6 +637,7 @@ under the License.
             <jvmarg value="-Djava.compiler=NONE"/>
             <jvmarg value="-Xdebug"/>
             <jvmarg value="-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8091"/>
+        	<jvmarg value="-Dfile.encoding=UTF-8"/>
             <arg value="start-debug"/>
             <arg value="-portoffset=${portoffset}"/>
         </java>
