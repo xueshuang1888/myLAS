@@ -261,7 +261,9 @@ KISBPM.TOOLBAR = {
         },
         
         closeEditor: function(services) {
-        	window.location.href = "./";
+        	//window.location.href = "./";
+        	//window.location.href = ACTIVITI.CONFIG.contextRoot + "/main";
+        	window.close();
         },
         
         /**
@@ -326,7 +328,10 @@ var SaveModelCtrl = [ '$rootScope', '$scope', '$http', '$route', '$location',
 
     $scope.saveAndClose = function () {
     	$scope.save(function() {
-    		window.location.href = "./";
+    		
+    		//window.location.href = "./";
+    		//window.location.href = ACTIVITI.CONFIG.contextRoot + "/main";
+    		window.close();
     	});
     };
     $scope.save = function (successCallback) {
@@ -375,8 +380,8 @@ var SaveModelCtrl = [ '$rootScope', '$scope', '$http', '$route', '$location',
             description: $scope.saveDialog.description
         };
 
-        // Update
-        $http({    method: 'PUT',
+        // Update method: 'PUT',
+        $http({    method: 'POST',
             data: params,
             ignoreErrors: true,
             headers: {'Accept': 'application/json',

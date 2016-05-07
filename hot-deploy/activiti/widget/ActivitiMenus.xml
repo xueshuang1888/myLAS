@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<menus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-menu.xsd">
-    <menu name="MainAppBar" title="${uiLabelMap.ActivitiApplication}" extends="CommonAppBarMenu" extends-resource="component://common/widget/CommonMenus.xml">
-        <menu-item name="main" title="${uiLabelMap.CommonMain}"><link target="main"/></menu-item>
-        <menu-item name="ActivitiEditor" title="${uiLabelMap.ActivitiEditor}"><link target="activitiEditor"/></menu-item>
-    </menu>
+<menus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-menu.xsd">
+	<menu name="MainAppBar" title="${uiLabelMap.ActivitiApplication}"
+		extends="CommonAppBarMenu" extends-resource="component://common/widget/CommonMenus.xml">
+		<menu-item name="main" title="${uiLabelMap.CommonMain}">
+			<link target="main" />
+		</menu-item>
+		<menu-item name="ActivitiEditor" title="${uiLabelMap.ActivitiEditor}">
+			<link target="activitiEditor" target-window="activiti" >
+				<parameter param-name="modelId" value="40"/>
+			</link>
+		</menu-item>
+	</menu>
 </menus>

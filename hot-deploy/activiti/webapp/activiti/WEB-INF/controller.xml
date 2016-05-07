@@ -23,6 +23,16 @@
 		<security https="true" auth="true" />
 		<response name="success" type="view" value="activitiEditor" />
 	</request-map>
+	<request-map uri="modelJson">
+		<security https="true" auth="true" />
+		<event type="java" path="org.ofbiz.activiti.servlet.ActivitiModelEditorEvent" invoke="getEditorJson"/>
+        <response name="success" type="none"/>
+	</request-map>
+	<request-map uri="modelSave" >
+		<security https="true" auth="true" />
+		<event type="java" path="org.ofbiz.activiti.servlet.ActivitiModelEditorEvent" invoke="saveModel"/>
+        <response name="success" type="none" />
+	</request-map>
 
 	<!-- View Mappings -->
 	<view-map name="main" type="screen"

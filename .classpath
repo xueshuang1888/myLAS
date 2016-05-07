@@ -2,9 +2,6 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="applications/content/lib/dom4j-1.6.1.jar"/>
-	<classpathentry kind="lib" path="applications/content/lib/pdfbox-1.8.5.jar"/>
-	<classpathentry kind="lib" path="applications/content/lib/jempbox-1.8.5.jar"/>
-	<classpathentry kind="lib" path="applications/content/lib/fontbox-1.8.5.jar"/>
 	<classpathentry kind="lib" path="applications/content/lib/poi-3.13-20150929.jar"/>
 	<classpathentry kind="lib" path="applications/product/lib/dozer-4.2.1.jar"/>
 	<classpathentry kind="lib" path="applications/product/lib/watermarker-0.0.4.jar"/>
@@ -132,6 +129,23 @@
 	<classpathentry kind="lib" path="specialpurpose/solr/lib/runtime/joda-time-2.2.jar"/>
 	<classpathentry kind="lib" path="specialpurpose/solr/lib/runtime/spatial4j-0.4.1.jar"/>
 	<classpathentry kind="lib" path="specialpurpose/solr/lib/runtime/zookeeper-3.4.6.jar"/>
+	<classpathentry kind="lib" path="hot-deploy/activiti/lib/activiti-bpmn-converter-5.20.0.jar"/>
+	<classpathentry kind="lib" path="hot-deploy/activiti/lib/activiti-bpmn-layout-5.20.0.jar"/>
+	<classpathentry kind="lib" path="hot-deploy/activiti/lib/activiti-bpmn-model-5.20.0.jar"/>
+	<classpathentry kind="lib" path="hot-deploy/activiti/lib/activiti-common-rest-5.20.0.jar"/>
+	<classpathentry kind="lib" path="hot-deploy/activiti/lib/activiti-crystalball-5.20.0.jar"/>
+	<classpathentry kind="lib" path="hot-deploy/activiti/lib/activiti-diagram-rest-5.20.0.jar"/>
+	<classpathentry kind="lib" path="hot-deploy/activiti/lib/activiti-engine-5.20.0.jar"/>
+	<classpathentry kind="lib" path="hot-deploy/activiti/lib/activiti-explorer-5.20.0.jar"/>
+	<classpathentry kind="lib" path="hot-deploy/activiti/lib/activiti-image-generator-5.20.0.jar"/>
+	<classpathentry kind="lib" path="hot-deploy/activiti/lib/activiti-json-converter-5.20.0.jar"/>
+	<classpathentry kind="lib" path="hot-deploy/activiti/lib/activiti-modeler-5.20.0.jar"/>
+	<classpathentry kind="lib" path="hot-deploy/activiti/lib/activiti-process-validation-5.20.0.jar"/>
+	<classpathentry kind="lib" path="hot-deploy/activiti/lib/activiti-simple-workflow-5.20.0.jar"/>
+	<classpathentry kind="lib" path="hot-deploy/activiti/lib/commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="lib" path="hot-deploy/activiti/lib/javaGeom-0.11.1.jar"/>
+	<classpathentry kind="lib" path="hot-deploy/activiti/lib/joda-time-2.6.jar"/>
+	<classpathentry kind="lib" path="hot-deploy/activiti/lib/mybatis-3.2.5.jar"/>
 	<classpathentry excluding="org/ofbiz/accounting/thirdparty/cybersource/**|org/ofbiz/accounting/thirdparty/verisign/**|org/ofbiz/accounting/thirdparty/paypal/PayPalServices.java|org/ofbiz/accounting/thirdparty/orbital/**|org/ofbiz/accounting/thirdparty/securepay/**|org/ofbiz/accounting/thirdparty/ideal/**" kind="src" path="applications/accounting/src"/>
 	<classpathentry excluding="org/ofbiz/content/openoffice/|org/ofbiz/content/report/" kind="src" path="applications/content/src"/>
 	<classpathentry kind="src" path="applications/manufacturing/src"/>
@@ -176,6 +190,7 @@
 	<classpathentry kind="src" path="specialpurpose/solr/src"/>
 	<classpathentry kind="src" path="specialpurpose/webpos/src"/>
 	<classpathentry kind="src" path="specialpurpose/passport/src"/>
+	<classpathentry kind="src" path="hot-deploy/activiti/src"/>
 	<classpathentry kind="lib" path="specialpurpose/solr/lib/compile/solr-core-5.3.1.jar"/>
 	<classpathentry kind="lib" path="specialpurpose/solr/lib/compile/solr-solrj-5.3.1.jar"/>
 	<classpathentry kind="lib" path="specialpurpose/lucene/lib/lucene-analyzers-common-5.3.1.jar"/>
