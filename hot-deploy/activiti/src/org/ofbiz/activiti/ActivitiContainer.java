@@ -35,7 +35,9 @@ public class ActivitiContainer implements Container {
         pecfg.setJdbcPassword(jdbc.getProperty("password"));  
         pecfg.setJdbcUrl(jdbc.getProperty("url"));  
         pecfg.setJdbcDriver(jdbc.getProperty("driver"));  
-  
+        pecfg.setLabelFontName("微软雅黑");
+        pecfg.setActivityFontName("微软雅黑");
+        
         //连接池设置  
         pecfg.setJdbcMaxActiveConnections(Integer.valueOf(jdbc.getProperty("jdbcMaxActiveConnections")));  
         pecfg.setJdbcMaxIdleConnections(Integer.valueOf(jdbc.getProperty("jdbcMaxIdleConnections")));  
