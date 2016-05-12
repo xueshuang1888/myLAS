@@ -11,5 +11,22 @@
 				<parameter param-name="modelId" value="40"/>
 			</link>
 		</menu-item>
+		<menu-item name="ActivitiModelWorkspace" title="${uiLabelMap.ActivitiModelWorkspace}" >
+			<link target="activitiModelWorkspace" />
+		</menu-item>
 	</menu>
+	
+	<menu name="ActivitModelAction" extends="CommonInlineBarMenu" extends-resource="component://common/widget/CommonMenus.xml">
+        <menu-item name="editModel" title="${uiLabelMap.CommonEdit}">
+           <link title="编辑" target="activitiEditor" target-window="_blank" ><parameter param-name="modelId" value="${id}"/></link>
+        </menu-item>
+        <menu-item name="deployModel" title="部署">
+            <link title="部署" target="deployModel" ><parameter param-name="modelId" value="${id}"/></link>
+	    </menu-item>
+        <menu-item name="deleteModel" title="${uiLabelMap.CommonDelete}">
+            <link title="删除" target="delActivitiModel" confirmation-message="确定要删除【${name}】流程模型么?" request-confirmation="true" >
+            	<parameter param-name="modelId" value="${id}"/>
+            </link>
+        </menu-item>
+    </menu>
 </menus>

@@ -35,6 +35,39 @@
 			</widgets>
 		</section>
 	</screen>
+	
+	<screen name="ActivitiModelWorkspace">
+		<section>
+			<actions>
+				<set field="titleProperty" value="ActivitiModelWorkspace" />
+				<set field="headerItem" value="ActivitiModelWorkspace" />
+				<set field="tabButtonItem" value="ActivitiModelWorkspace" />
+				<set field="activitiModelCtx" from-field="parameters"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="ActivitiCommonDecorator"
+					location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+                        <container style="button-bar">
+                        	<link target="editActivitiModelLayer" link-type="layered-modal" 
+                        		text="${uiLabelMap.EditNewActivitiModel}" style="buttontext create"/>
+                        </container>
+						<screenlet title="${uiLabelMap.ActivitiModelWorkspace}">
+							<include-form location="component://activiti/widget/ActivitiForms.xml" name="ActivitiModelList"/>
+						</screenlet>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	
+	<screen name="EditActivitiModelLayer">
+		<section>
+			<widgets>
+				<include-form location="component://activiti/widget/ActivitiForms.xml" name="EditActivitiModelLayerForm"/>
+			</widgets>
+		</section>
+	</screen>
 
 
 </screens>

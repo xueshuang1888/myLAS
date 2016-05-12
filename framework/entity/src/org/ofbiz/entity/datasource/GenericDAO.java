@@ -788,7 +788,7 @@ public class GenericDAO {
         if (Debug.timingOn()) {
             long queryEndTime = System.currentTimeMillis();
             long queryTotalTime = queryEndTime - queryStartTime;
-            if (queryTotalTime > 150) {
+            if (queryTotalTime > -1) {
                 Debug.logTiming("Ran query in " + queryTotalTime + " milli-seconds: " + " EntityName: " + modelEntity.getEntityName() + " Sql: " + sql + " where clause:" + whereEntityConditionParams, module);
             }
         }
