@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <entitymodel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/entitymodel.xsd">
-    <!-- ========================================================= -->
-    <!-- ======================== Defaults ======================= -->
-    <!-- ========================================================= -->
-    <title>Entity of Activiti Component</title>
-    <description>None</description>
-    <copyright></copyright>
-    <version></version>
+	xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/entitymodel.xsd">
+	<!-- ========================================================= -->
+	<!-- ======================== Defaults ======================= -->
+	<!-- ========================================================= -->
+	<title>Entity of Activiti Component</title>
+	<description>None</description>
+	<copyright></copyright>
+	<version></version>
 
+	<entity entity-name="ActivitiModel" package-name="org.ofbiz.entity.activiti" table-name="ACT_RE_MODEL" no-auto-stamp="true">
+		<description>Activiti Model Entity</description>
+		<field name="id" type="id-mlong" col-name="ID_"></field>
+		<field name="rev" type="int" col-name="REV_"></field>
+		<field name="name" type="comment" col-name="NAME_"></field>
+		<field name="key" type="comment" col-name="KEY_"></field>
+		<field name="category" type="comment" col-name="CATEGORY_"></field>
+		<field name="createTime" type="timestamp" col-name="CREATE_TIME_" not-null="false"></field>
+		<field name="lastUpdateTime" type="timestamp" col-name="LAST_UPDATE_TIME_" not-null="false"></field>
+		<field name="version" type="int" col-name="VERSION"></field>
+		<field name="metaInfo" type="comment-long" col-name="META_INFO_"></field>
+		<field name="deploymentId" type="id-mlong" col-name="DEPLOYMENT_ID_"></field>
+		<field name="editorSourceValueId" type="id-mlong" col-name="EDITOR_SOURCE_VALUE_ID_"></field>
+		<field name="editorSourceExtraValueId" type="id-mlong" col-name="EDITOR_SOURCE_EXTRA_VALUE_ID_"></field>
+		<field name="tenantId" type="comment" col-name="TENANT_ID_"></field>
+		<prim-key field="id"/>
+	</entity>
 </entitymodel>

@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-        xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-form.xsd">
+	xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-form.xsd">
 
-
+	<form name="ActivitiModelList" type="list" list-name="listIt" paginate-target="activitiModelWorkspace" default-entity-name="ActivitiModel" separate-columns="true"
+        odd-row-style="alternate-row" header-row-style="header-row-2" default-table-style="basic-table hover-bar">
+        <actions>
+            <service service-name="performFind" result-map="result" result-map-list="listIt">
+                <field-map field-name="inputFields" from-field="activitiModelCtx"/>
+                <field-map field-name="entityName" value="ActivitiModel"/>
+                <field-map field-name="orderBy" from-field="parameters.sortField"/>
+                <field-map field-name="viewIndex" from-field="viewIndex"/>
+                <field-map field-name="viewSize" from-field="viewSize"/>
+                <field-map field-name="noConditionFind" value="Y"/>
+            </service>
+            <set field="sortField" from-field="parameters.sortField"/>
+        </actions>
+        <field name="id" title="${uiLabelMap.ID}" ><display/></field>
+        <field name="key" title="${uiLabelMap.key}" ><display/></field>
+        <field name="name" title="${uiLabelMap.CommonName}" ><display/></field>
+        <field name="version" title="${uiLabelMap.Version}" ><display/></field>
+        <field name="createTime" title="${uiLabelMap.CommonCreateTime}" ><display/></field>
+        <field name="lastUpdateTime" title="${uiLabelMap.CommonLastUpdateTime}" ><display/></field>
+        <field name="metaInfo" title="${uiLabelMap.MetaInfo}" ><display/></field>
+        <field name="operate1" title="${uiLabelMap.Operate}" >
+        	<include-menu location="component://activiti/widget/ActivitiMenus.xml" name="ActivitModelAction"/>
+        </field>
+    </form>
+    
+    <form name="EditActivitiModelLayerForm" type="single" target="editActivitiModelLayerForm" title="">
+     	<field name="key" title="${uiLabelMap.key}" ><text /></field>
+        <field name="name" title="${uiLabelMap.CommonName}" ><text/></field>
+        <field name="description" title="${uiLabelMap.CommonDescription}" ><text /></field>
+        <field name="submitButton" title="${uiLabelMap.CommonSubmit}"><button button-type="button" /></field>
+    </form>
 </forms>

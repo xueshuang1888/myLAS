@@ -19,9 +19,35 @@
 		<security https="true" auth="true" />
 		<response name="success" type="view" value="main" />
 	</request-map>
+	
+	<request-map uri="activitiModelWorkspace">
+		<security https="true" auth="true" />
+		<response name="success" type="view" value="activitiModelWorkspace" />
+	</request-map>
 	<request-map uri="activitiEditor">
 		<security https="true" auth="true" />
 		<response name="success" type="view" value="activitiEditor" />
+	</request-map>
+	<request-map uri="editActivitiModelLayer">
+		<security https="true" auth="true" />
+		<response name="success" type="view" value="editActivitiModelLayer" />
+	</request-map>
+	<request-map uri="createModel">
+		<security https="true" auth="true" />
+		<event type="java" path="org.ofbiz.activiti.servlet.ActivitiModelEditorEvent" invoke="createModel"/>
+		<response name="success" type="none"/>
+	</request-map>
+	<request-map uri="deployModel">
+		<security https="true" auth="true" />
+		<event type="java" path="org.ofbiz.activiti.servlet.ActivitiModelEditorEvent" invoke="deployModel"/>
+		<response name="success" type="view" value="activitiModelWorkspace" />
+		<response name="error" type="view" value="activitiModelWorkspace" />
+	</request-map>
+	<request-map uri="delActivitiModel">
+		<security https="true" auth="true" />
+		<event type="java" path="org.ofbiz.activiti.servlet.ActivitiModelEditorEvent" invoke="deleteModel"/>
+		<response name="success" type="view" value="activitiModelWorkspace" />
+		<response name="error" type="view" value="activitiModelWorkspace" />
 	</request-map>
 	<request-map uri="modelJson">
 		<security https="true" auth="true" />
@@ -37,6 +63,10 @@
 	<!-- View Mappings -->
 	<view-map name="main" type="screen"
 		page="component://activiti/widget/ActivitiScreens.xml#main" />
+	<view-map name="activitiModelWorkspace" type="screen"
+		page="component://activiti/widget/ActivitiScreens.xml#ActivitiModelWorkspace" />
 	<view-map name="activitiEditor" type="screen"
 		page="component://activiti/widget/ActivitiScreens.xml#ActivitiEditor" />
+	<view-map name="editActivitiModelLayer" type="screen"
+		page="component://activiti/widget/ActivitiScreens.xml#EditActivitiModelLayer" />
 </site-conf>

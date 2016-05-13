@@ -55,11 +55,13 @@ access. For a detailed description see the core/docs/entityconfig.html file.
         <group-map group-name="org.ofbiz" datasource-name="localmysql"/>
         <group-map group-name="org.ofbiz.olap" datasource-name="localmysqlolap"/>
         <group-map group-name="org.ofbiz.tenant" datasource-name="localmysqltenant"/>
+        <group-map group-name="org.ofbiz.activiti" datasource-name="localmysqlactiviti"/>
     </delegator>
     <delegator name="default-no-eca" entity-model-reader="main" entity-group-reader="main" entity-eca-reader="main" entity-eca-enabled="false" distributed-cache-clear-enabled="false">
         <group-map group-name="org.ofbiz" datasource-name="localmysql"/>
         <group-map group-name="org.ofbiz.olap" datasource-name="localmysqlolap"/>
         <group-map group-name="org.ofbiz.tenant" datasource-name="localmysqltenant"/>
+        <group-map group-name="org.ofbiz.activiti" datasource-name="localmysqlactiviti"/>
     </delegator>
 
     <!-- be sure that your default delegator (or the one you use) uses the same datasource for test. You must run "ant load-demo" before running "ant run-tests" -->
@@ -67,6 +69,7 @@ access. For a detailed description see the core/docs/entityconfig.html file.
         <group-map group-name="org.ofbiz" datasource-name="localmysql"/>
         <group-map group-name="org.ofbiz.olap" datasource-name="localmysqlolap"/>
         <group-map group-name="org.ofbiz.tenant" datasource-name="localmysqltenant"/>
+        <group-map group-name="org.ofbiz.activiti" datasource-name="localmysqlactiviti"/>
     </delegator>
    
     <!-- need to at least define a name for each component to use -->
@@ -409,6 +412,39 @@ access. For a detailed description see the core/docs/entityconfig.html file.
         <inline-jdbc
                 jdbc-driver="com.mysql.jdbc.Driver"
                 jdbc-uri="jdbc:mysql://127.0.0.1/15_ofbiztenant?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8"
+                jdbc-username="ofbiz"
+                jdbc-password="ofbiz"
+                isolation-level="ReadCommitted"
+                pool-minsize="2"
+                pool-maxsize="250"
+                time-between-eviction-runs-millis="600000"/><!-- Please note that at least one person has experienced a problem with this value with MySQL
+                and had to set it to -1 in order to avoid this issue.
+                For more look at http://markmail.org/thread/5sivpykv7xkl66px and http://commons.apache.org/dbcp/configuration.html-->
+        <!-- <jndi-jdbc jndi-server-name="localjndi" jndi-name="java:/MySqlDataSource" isolation-level="Serializable"/> -->
+    </datasource>
+    <datasource name="localmysqlactiviti"
+            helper-class="org.ofbiz.entity.datasource.GenericHelperDAO"
+            field-type-name="mysql"
+            check-on-start="true"
+            add-missing-on-start="true"
+            check-pks-on-start="false"
+            use-foreign-keys="true"
+            join-style="ansi-no-parenthesis"
+            alias-view-columns="false"
+            drop-fk-use-foreign-key-keyword="true"
+            table-type="InnoDB"
+            character-set="utf8"
+            collate="utf8_general_ci">
+        <read-data reader-name="tenant"/>
+        <read-data reader-name="seed"/>
+        <read-data reader-name="seed-initial"/>
+        <read-data reader-name="demo"/>
+        <read-data reader-name="ext"/>
+        <read-data reader-name="ext-test"/>
+        <read-data reader-name="ext-demo"/>
+        <inline-jdbc
+                jdbc-driver="com.mysql.jdbc.Driver"
+                jdbc-uri="jdbc:mysql://127.0.0.1/activiti5?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8"
                 jdbc-username="ofbiz"
                 jdbc-password="ofbiz"
                 isolation-level="ReadCommitted"
