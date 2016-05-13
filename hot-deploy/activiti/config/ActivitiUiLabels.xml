@@ -3,7 +3,6 @@
     <property key="ActivitiApplication">
         <value xml:lang="en">Activiti Application</value>
         <value xml:lang="zh">Activiti应用程序</value>
-        <value xml:lang="zh-TW">Activiti應用程式</value>
     </property>
     <property key="ActivitiCompanyName">
         <value xml:lang="en">OFBiz: Activiti</value>
@@ -13,11 +12,40 @@
         <value xml:lang="en">Part of the Apache OFBiz Family of Open Source Software</value>
         <value xml:lang="it">Un modulo della famiglia di software open source Apache OFBiz</value>
         <value xml:lang="zh">开源软件OFBiz的组成部分</value>
-        <value xml:lang="zh-TW">開源軟體OFBiz的組成部分</value>
     </property>
     <property key="ActivitiViewPermissionError">
         <value xml:lang="en">You are not allowed to view this page.</value>
         <value xml:lang="zh">不允许你浏览这个页面。</value>
-        <value xml:lang="zh-TW">不允許您檢視這個頁面.</value>
     </property>
+    <property key="ActivitiModelWorkspace">
+    	<value xml:lang="en">Model List</value>
+    	<value xml:lang="zh">模型列表</value>
+    </property>
+    <property key="ActivitiEditor">
+    	<value xml:lang="en">Model Editor</value>
+    	<value xml:lang="zh">模型编辑器</value>
+    </property>
+    <property key="EditNewActivitiModel">
+    	<value xml:lang="en">New Model</value>
+    	<value xml:lang="zh">新建</value>
+    </property>
+    <property key="key">
+    	<value xml:lang="en">Key</value>
+    	<value xml:lang="zh">编码</value>
+    </property>
+    <property key="CommonName">
+    	<value xml:lang="en">Name</value>
+    	<value xml:lang="zh">名称</value>
+    </property>
+    <property key="CommonDescription">
+    	<value xml:lang="en">Description</value>
+    	<value xml:lang="zh">描述</value>
+    </property>
+    <property key="CommonSubmit">
+    	<value xml:lang="en">Submit</value>
+    	<value xml:lang="zh">保存</value>
+    </property>
+    
+    
+    
 </resource>
