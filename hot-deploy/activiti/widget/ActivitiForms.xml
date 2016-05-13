@@ -31,6 +31,6 @@
      	<field name="key" title="${uiLabelMap.key}" ><text /></field>
         <field name="name" title="${uiLabelMap.CommonName}" ><text/></field>
         <field name="description" title="${uiLabelMap.CommonDescription}" ><text /></field>
-        <field name="submitButton" title="${uiLabelMap.CommonSubmit}"><button button-type="button" /></field>
+        <field name="submitButton" title="${uiLabelMap.CommonSubmit}"><submit button-type="button" /></field>
     </form>
 </forms>
