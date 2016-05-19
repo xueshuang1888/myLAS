@@ -6,14 +6,15 @@
 		<menu-item name="main" title="${uiLabelMap.CommonMain}">
 			<link target="main" />
 		</menu-item>
+		<menu-item name="ActivitiModelWorkspace" title="${uiLabelMap.ActivitiModelWorkspace}" >
+			<link target="activitiModelWorkspace" />
+		</menu-item>
 		<menu-item name="ActivitiEditor" title="${uiLabelMap.ActivitiEditor}">
 			<link target="activitiEditor" target-window="activiti" >
 				<parameter param-name="modelId" value="40"/>
 			</link>
 		</menu-item>
-		<menu-item name="ActivitiModelWorkspace" title="${uiLabelMap.ActivitiModelWorkspace}" >
-			<link target="activitiModelWorkspace" />
-		</menu-item>
+		
 	</menu>
 	
 	<menu name="ActivitModelAction" extends="CommonInlineBarMenu" extends-resource="component://common/widget/CommonMenus.xml">
