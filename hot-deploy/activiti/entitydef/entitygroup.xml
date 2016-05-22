@@ -25,4 +25,10 @@ under the License.
     <!-- org.ofbiz.entity.tenant -->
     <!-- ========================================================= -->
     <entity-group group="org.ofbiz.activiti" entity="ActivitiModel"/>
+    <entity-group group="org.ofbiz.activiti" entity="ActivitiProcDef"/>
+    <entity-group group="org.ofbiz.activiti" entity="ActivitiDeployment"/>
+    <entity-group group="org.ofbiz.activiti" entity="ActivitiExecution"/>
+    
+    <entity-group group="org.ofbiz.activiti" entity="ActivitiProcessDefAndDeploy"/>
+    <entity-group group="org.ofbiz.activiti" entity="ActivitiProcessDefAndExecution"/>
 </entitygroup>

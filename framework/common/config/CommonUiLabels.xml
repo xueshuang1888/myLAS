@@ -15013,6 +15013,11 @@
         <value xml:lang="zh-CN">工作计划</value>
         <value xml:lang="zh-TW">工作投入</value>
     </property>
+    <property key="Activiti">
+        <value xml:lang="en">Activiti</value>
+        <value xml:lang="zh">工作流管理</value>
+        <value xml:lang="zh-CN">工作流管理</value>
+    </property>
     <property key="ar">
         <value xml:lang="ar">عربية</value>
         <value xml:lang="cs">Arabština</value>
@@ -15344,4 +15349,8 @@
         <value xml:lang="zh-TW">中文</value>
     </property>
 
+	<property key="CommonCreateTime">
+    	<value xml:lang="en">Create Time</value>
+    	<value xml:lang="zh">创建时间</value>
+    </property>
 </resource>

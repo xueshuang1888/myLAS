@@ -108,6 +108,7 @@ under the License.
             <#if imgStr?has_content>${imgStr}</#if><#if text?has_content>${text}</#if>
         </a>
     <#else>
+		<input type="hidden" id="modalTitle" value="<#if text?has_content>${text}</#if>">
         <div id="${uniqueItemName}"></div>
         <a href="javascript:void(0);" id="${uniqueItemName}_link" 
         <#if style?has_content>class="${style}"</#if>>
@@ -128,7 +129,7 @@ under the License.
             });
             jQuery("#${uniqueItemName}").dialog({
                  autoOpen: false,
-                 <#if text?has_content>title: "${text}",</#if>
+                 <#if text?has_content>title: $("#modalTitle").val(),</#if>
                  height: ${height},
                  width: ${width},
                  modal: true,

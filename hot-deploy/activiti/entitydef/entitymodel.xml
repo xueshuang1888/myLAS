@@ -12,7 +12,7 @@
 	<entity entity-name="ActivitiModel" package-name="org.ofbiz.entity.activiti" table-name="ACT_RE_MODEL" no-auto-stamp="true">
 		<description>Activiti Model Entity</description>
 		<field name="id" type="id-mlong" col-name="ID_"></field>
-		<field name="rev" type="int" col-name="REV_"></field>
+		<field name="rev" type="int" col-name="REV_"><description><![CDATA[reversion:更新版本]]></description></field>
 		<field name="name" type="comment" col-name="NAME_"></field>
 		<field name="key" type="comment" col-name="KEY_"></field>
 		<field name="category" type="comment" col-name="CATEGORY_"></field>
@@ -26,4 +26,87 @@
 		<field name="tenantId" type="comment" col-name="TENANT_ID_"></field>
 		<prim-key field="id"/>
 	</entity>
+	
+	<entity entity-name="ActivitiProcDef" package-name="org.ofbiz.entity.activiti" table-name="ACT_RE_PROCDEF" no-auto-stamp="true">
+		<description>Activiti ProcDef Entity(流程实例定义)</description>
+		<field name="id" type="id-mlong" col-name="ID_"></field>
+		<field name="rev" type="int" col-name="REV_"></field>
+		<field name="name" type="comment" col-name="NAME_"></field>
+		<field name="key" type="comment" col-name="KEY_"></field>
+		<field name="version" type="int" col-name="VERSION_"></field>
+		<field name="deploymentId" type="id-mlong" col-name="DEPLOYMENT_ID_" not-null="false"></field>
+		<field name="resourceName" type="comment-long" col-name="RESOURCE_NAME_" not-null="false"></field>
+		<field name="dgrmResourceName" type="comment-long" col-name="DGRM_RESOURCE_NAME_"></field>
+		<field name="description" type="comment-long" col-name="DESCRIPTION_"></field>
+		<field name="hasStartFormKey" type="int" col-name="HAS_START_FORM_KEY_"></field>
+		<field name="hasGraphicalNotation" type="int" col-name="HAS_GRAPHICAL_NOTATION_"></field>
+		<field name="suspensionState" type="int" col-name="SUSPENSION_STATE_"></field>
+		<field name="tenantId" type="comment" col-name="TENANT_ID_"></field>
+		<prim-key field="id"/>
+		<relation rel-entity-name="ActivitiDeployment" type="one-nofk">
+			<key-map field-name="deploymentId" rel-field-name="id" />
+		</relation>
+	</entity>
+	
+	<entity entity-name="ActivitiDeployment" package-name="org.ofbiz.entity.activiti" table-name="ACT_RE_DEPLOYMENT" no-auto-stamp="true">
+		<description>Activiti ProcDef Entity(流程部署)</description>
+		<field name="id" type="id-mlong" col-name="ID_"></field>
+		<field name="name" type="comment" col-name="NAME_"></field>
+		<field name="category" type="comment" col-name="CATEGORY_"></field>
+		<field name="tenantId" type="comment" col-name="TENANT_ID_"></field>
+		<field name="deployTime" type="timestamp" col-name="DEPLOY_TIME_"></field>
+		<prim-key field="id"/>
+	</entity>
+	
+	<view-entity entity-name="ActivitiProcessDefAndDeploy" package-name="org.ofbiz.entity.activiti">
+		<description>流程定义和部署</description>
+		<member-entity entity-alias="APD" entity-name="ActivitiProcDef"/>
+		<member-entity entity-alias="AD" entity-name="ActivitiDeployment"/>
+		<alias-all entity-alias="APD" />
+		<alias entity-alias="AD" name="deploymentName" field="name" />
+		<alias entity-alias="AD" name="category" field="category" />
+		<alias entity-alias="AD" name="deployTime" field="deployTime" />
+		<view-link rel-entity-alias="AD" entity-alias="APD">
+			<key-map field-name="deploymentId" rel-field-name="id"/>
+		</view-link>
+	</view-entity>
+	
+	<entity entity-name="ActivitiExecution" package-name="org.ofbiz.entity.activiti" table-name="ACT_RU_EXECUTION" no-auto-stamp="true">
+		<description>流程任务执行</description>
+		<field name="id" type="id-mlong" col-name="ID_"/>
+		<field name="rev" type="int" col-name="REV_"/>
+		<field name="procInstId" type="id-mlong" col-name="PROC_INST_ID_"/>
+		<field name="businessKey" type="comment" col-name="BUSINESS_KEY_"/>
+		<field name="parentId" type="id-mlong" col-name="PARENT_ID_"/>
+		<field name="procDefId" type="id-mlong" col-name="PROC_DEF_ID_"/>
+		<field name="superExec" type="id-mlong" col-name="SUPER_EXEC_"/>
+		<field name="actId" type="comment" col-name="ACT_ID_"/>
+		<field name="isActive" type="short-int" col-name="IS_ACTIVE_"/>
+		<field name="isConcurrent" type="short-int" col-name="IS_CONCURRENT_"/>
+		<field name="isScope" type="short-int" col-name="IS_SCOPE_"/>
+		<field name="isEventScope" type="short-int" col-name="IS_EVENT_SCOPE_"/>
+		<field name="suspensionState" type="int" col-name="SUSPENSION_STATE_"/>
+		<field name="cachedEntState" type="int" col-name="CACHED_ENT_STATE_"/>
+		<field name="tenantId" type="comment" col-name="TENANT_ID_"/>
+		<field name="name" type="comment" col-name="NAME_"/>
+		<field name="lockTime" type="timestamp" col-name="LOCK_TIME_"/>
+	</entity>
+	
+	<view-entity entity-name="ActivitiProcessDefAndExecution" package-name="org.ofbiz.entity.activiti" >
+		<description>已启动流程</description>
+		<member-entity entity-alias="AE" entity-name="ActivitiExecution" />
+		<member-entity entity-alias="APD" entity-name="ActivitiProcDef"/>
+		<alias-all entity-alias="AE" />
+		<alias entity-alias="APD" name="processDefinitionKey" field="key"/>
+		<alias entity-alias="APD" name="processDefinitionId" field="id"/>
+		<alias entity-alias="APD" name="processDefinitionName" field="name"/>
+		<alias entity-alias="APD" name="processDefinitionVersion" field="version"/>
+		<alias entity-alias="APD" name="deploymentId" field="deploymentId"/>
+		<view-link rel-entity-alias="APD" entity-alias="AE">
+			<key-map field-name="procDefId" rel-field-name="id"/>
+		</view-link>
+		<entity-condition >
+			<condition-expr field-name="parentId" entity-alias="AE" operator="equals" value=""/>
+		</entity-condition>
+	</view-entity>
 </entitymodel>

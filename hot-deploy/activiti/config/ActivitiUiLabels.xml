@@ -27,7 +27,7 @@
     </property>
     <property key="EditNewActivitiModel">
     	<value xml:lang="en">New Model</value>
-    	<value xml:lang="zh">新建</value>
+    	<value xml:lang="zh">新建模型</value>
     </property>
     <property key="key">
     	<value xml:lang="en">Key</value>
@@ -37,15 +37,62 @@
     	<value xml:lang="en">Name</value>
     	<value xml:lang="zh">名称</value>
     </property>
-    <property key="CommonDescription">
-    	<value xml:lang="en">Description</value>
-    	<value xml:lang="zh">描述</value>
+    <property key="Deploy">
+    	<value xml:lang="en">Deploy</value>
+    	<value xml:lang="zh">部署</value>
     </property>
-    <property key="CommonSubmit">
-    	<value xml:lang="en">Submit</value>
-    	<value xml:lang="zh">保存</value>
+    <property key="MetaInfo">
+    	<value xml:lang="en">Meta Info</value>
+    	<value xml:lang="zh">元数据</value>
     </property>
     
-    
+    <property key="ActivitiProcessList">
+    	<value xml:lang="en">ActivitiProcessList</value>
+    	<value xml:lang="zh">流程定义及部署</value>
+    </property>
+    <property key="ProcessId">
+    	<value xml:lang="en">Process Id</value>
+    	<value xml:lang="zh">流程标识</value>
+    </property>
+    <property key="DeploymentId">
+    	<value xml:lang="en">Deployment Id</value>
+    	<value xml:lang="zh">部署标识</value>
+    </property>
+    <property key="ResourceName">
+    	<value xml:lang="en">XML</value>
+    	<value xml:lang="zh">XML</value>
+    </property>
+    <property key="DgrmResourceName">
+    	<value xml:lang="en">DgrmResource Name</value>
+    	<value xml:lang="zh">图片</value>
+    </property>
+    <property key="Suspended">
+    	<value xml:lang="en">Is Suspended</value>
+    	<value xml:lang="zh">是否挂起</value>
+    </property>
+    <property key="TranseferToModel">
+    	<value xml:lang="en">Transefer To Model</value>
+    	<value xml:lang="zh">转为模型</value>
+    </property>
+    <property key="DeployTime">
+    	<value xml:lang="en">Deploy Time</value>
+    	<value xml:lang="zh">部署时间</value>
+    </property>
+    <property key="ProcessInstanceId">
+    	<value xml:lang="en">Process Instance Id</value>
+    	<value xml:lang="zh">流程实例标识</value>
+    </property>
+    <property key="ProcessExcutionId">
+    	<value xml:lang="en">Process Excution Id</value>
+    	<value xml:lang="zh">执行标识</value>
+    </property>
+    <property key="CurrentNode">
+    	<value xml:lang="en">Current Node</value>
+    	<value xml:lang="zh">当前节点</value>
+    </property>
+    <property key="StartedProcessList">
+    	<value xml:lang="en">Started Process List</value>
+    	<value xml:lang="zh">运行中的流程</value>
+    </property>
     
 </resource>

@@ -49,7 +49,7 @@
 					location="${parameters.mainDecoratorLocation}">
 					<decorator-section name="body">
                         <container style="button-bar">
-                        	<link target="editActivitiModelLayer" link-type="layered-modal" 
+                        	<link target="editActivitiModelLayer" link-type="layered-modal" encode="true" confirmation-message="aaa" request-confirmation="true"
                         		text="${uiLabelMap.EditNewActivitiModel}" style="buttontext create"/>
                         </container>
 						<screenlet title="${uiLabelMap.ActivitiModelWorkspace}">
@@ -63,11 +63,57 @@
 	
 	<screen name="EditActivitiModelLayer">
 		<section>
+			<actions>
+				<property-map resource="ActivitiUiLabels" map-name="uiLabelMap" global="true"/>
+                <property-map resource="CommonUiLabels" map-name="uiLabelMap" global="true"/>
+			</actions>
 			<widgets>
 				<include-form location="component://activiti/widget/ActivitiForms.xml" name="EditActivitiModelLayerForm"/>
 			</widgets>
 		</section>
 	</screen>
 
+	<screen name="ActivitiProcessList">
+		<section>
+			<actions>
+				<set field="titleProperty" value="ActivitiProcessList" />
+				<set field="headerItem" value="ActivitiProcessList" />
+				<set field="tabButtonItem" value="ActivitiProcessList" />
+				<set field="activitiProcessDefAndDeployCtx" from-field="parameters"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="ActivitiCommonDecorator"
+					location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<screenlet title="${uiLabelMap.ActivitiProcessList}">
+							<include-form location="component://activiti/widget/ActivitiForms.xml" name="ActivitiProcessAndDeploymentList"/>
+						</screenlet>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	
+	<!--  -->
+	<screen name="StartedProcessList">
+		<section>
+			<actions>
+				<set field="titleProperty" value="StartedProcessList" />
+				<set field="headerItem" value="StartedProcessList" />
+				<set field="tabButtonItem" value="StartedProcessList" />
+				<set field="activitiProcessDefAndExecutionCtx" from-field="parameters"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="ActivitiCommonDecorator"
+					location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<screenlet title="${uiLabelMap.StartedProcessList}">
+							<include-form location="component://activiti/widget/ActivitiForms.xml" name="StartedProcessList"/>
+						</screenlet>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
 
 </screens>

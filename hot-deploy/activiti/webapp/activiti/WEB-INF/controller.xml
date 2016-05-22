@@ -35,7 +35,9 @@
 	<request-map uri="createModel">
 		<security https="true" auth="true" />
 		<event type="java" path="org.ofbiz.activiti.servlet.ActivitiModelEditorEvent" invoke="createModel"/>
-		<response name="success" type="none"/>
+		<response name="success" type="request-redirect" value="activitiEditor" >
+			<redirect-parameter name="modelId" from="modelId" />
+		</response>
 	</request-map>
 	<request-map uri="deployModel">
 		<security https="true" auth="true" />
@@ -59,6 +61,46 @@
 		<event type="java" path="org.ofbiz.activiti.servlet.ActivitiModelEditorEvent" invoke="saveModel"/>
         <response name="success" type="none" />
 	</request-map>
+	
+	<!-- processdefinition -->
+	<request-map uri="activitiProcessList" >
+		<security https="true" auth="true" />
+        <response name="success" type="view" value="activitiProcessList"/>
+	</request-map>
+	<request-map uri="readResource" >
+		<security https="true" auth="true" />
+		<event type="java" path="org.ofbiz.activiti.servlet.ActivitiProcessDefEvent" invoke="readResource"/>
+        <response name="success" type="none" />
+	</request-map>
+	<request-map uri="delActivitiProcess" >
+		<security https="true" auth="true" />
+		<event type="java" path="org.ofbiz.activiti.servlet.ActivitiProcessDefEvent" invoke="delActivitiProcess"/>
+        <response name="success" type="view" value="activitiProcessList" />
+        <response name="error" type="view" value="activitiProcessList" />
+	</request-map>
+	<request-map uri="transeferToModel" >
+		<security https="true" auth="true" />
+		<event type="java" path="org.ofbiz.activiti.servlet.ActivitiProcessDefEvent" invoke="transeferToModel"/>
+        <response name="success" type="request-redirect" value="activitiEditor" >
+			<redirect-parameter name="modelId" from="modelId" />
+		</response>
+	</request-map>
+	<request-map uri="updateState" >
+		<security https="true" auth="true" />
+		<event type="java" path="org.ofbiz.activiti.servlet.ActivitiProcessDefEvent" invoke="updateState"/>
+        <response name="success" type="request-redirect" value="activitiProcessList" />
+	</request-map>
+	
+	<!--  -->
+	<request-map uri="startedProcessList" >
+		<security https="true" auth="true" />
+        <response name="success" type="view" value="startedProcessList"/>
+	</request-map>
+	<request-map uri="updateStateByStarted" >
+		<security https="true" auth="true" />
+		<event type="java" path="org.ofbiz.activiti.servlet.ActivitiProcessDefEvent" invoke="updateState"/>
+        <response name="success" type="request-redirect" value="startedProcessList" />
+	</request-map>
 
 	<!-- View Mappings -->
 	<view-map name="main" type="screen"
@@ -69,4 +111,10 @@
 		page="component://activiti/widget/ActivitiScreens.xml#ActivitiEditor" />
 	<view-map name="editActivitiModelLayer" type="screen"
 		page="component://activiti/widget/ActivitiScreens.xml#EditActivitiModelLayer" />
+		
+	<view-map name="activitiProcessList" type="screen"
+		page="component://activiti/widget/ActivitiScreens.xml#ActivitiProcessList" />
+		
+	<view-map name="startedProcessList" type="screen"
+		page="component://activiti/widget/ActivitiScreens.xml#StartedProcessList" />
 </site-conf>

@@ -724,7 +724,7 @@ function submitFormDisableSubmits(form) {
         var formel = form.elements[i];
         if (formel.type == "submit") {
             submitFormDisableButton(formel);
-            var formName = form.name;
+            var formName = $(form).attr("name");//form.name;
             var formelName = formel.name;
             var timeoutString = "submitFormEnableButtonByName('" + formName + "', '" + formelName + "')";
             var t = setTimeout(timeoutString, 1500);

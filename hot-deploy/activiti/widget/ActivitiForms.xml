@@ -3,7 +3,7 @@
 	xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-form.xsd">
 
 	<form name="ActivitiModelList" type="list" list-name="listIt" paginate-target="activitiModelWorkspace" default-entity-name="ActivitiModel" separate-columns="true"
-        odd-row-style="alternate-row" header-row-style="header-row-2" default-table-style="basic-table hover-bar">
+        odd-row-style="alternate-row" header-row-style="header-row-2" default-table-style="basic-table hover-bar" >
         <actions>
             <service service-name="performFind" result-map="result" result-map-list="listIt">
                 <field-map field-name="inputFields" from-field="activitiModelCtx"/>
@@ -15,22 +15,126 @@
             </service>
             <set field="sortField" from-field="parameters.sortField"/>
         </actions>
-        <field name="id" title="${uiLabelMap.ID}" ><display/></field>
+        
+        <field name="id" title="${uiLabelMap.CommonId}" ><display/></field>
         <field name="key" title="${uiLabelMap.key}" ><display/></field>
         <field name="name" title="${uiLabelMap.CommonName}" ><display/></field>
-        <field name="version" title="${uiLabelMap.Version}" ><display/></field>
-        <field name="createTime" title="${uiLabelMap.CommonCreateTime}" ><display/></field>
-        <field name="lastUpdateTime" title="${uiLabelMap.CommonLastUpdateTime}" ><display/></field>
+        <field name="version" title="${uiLabelMap.CommonReleaseVersion}" ><display/></field>
+        <field name="createTime" title="${uiLabelMap.CommonCreateTime}" ><display description="${groovy:org.ofbiz.base.util.UtilDateTime.toDateString(createTime,'yyyy-MM-dd')}"/></field>
+        <field name="lastUpdateTime" title="${uiLabelMap.CommonLastUpdated}" sort-field="true"><display description="${groovy:org.ofbiz.base.util.UtilDateTime.toDateString(lastUpdateTime,'yyyy-MM-dd')}"/></field>
         <field name="metaInfo" title="${uiLabelMap.MetaInfo}" ><display/></field>
-        <field name="operate1" title="${uiLabelMap.Operate}" >
+        <field name="operate1" title="${uiLabelMap.FormFieldTitle_actionEnumId}" >
         	<include-menu location="component://activiti/widget/ActivitiMenus.xml" name="ActivitModelAction"/>
+        </field>
+        
+    </form>
+    
+    <form name="EditActivitiModelLayerForm" type="single" target="createModel" title="${uiLabelMap.EditNewActivitiModel}" >
+     	<field name="key" title="${uiLabelMap.key}" required-field="true" ><text /></field>
+        <field name="name" title="${uiLabelMap.CommonName}" required-field="true"><text/></field>
+        <field name="description" title="${uiLabelMap.CommonDescription}" ><text /></field>
+        <field name="submitButton" title="${uiLabelMap.CommonSubmit}" >
+        	<submit button-type="button" />
         </field>
     </form>
     
-    <form name="EditActivitiModelLayerForm" type="single" target="createModel" title="${uiLabelMap.EditNewActivitiModel}">
-     	<field name="key" title="${uiLabelMap.key}" ><text /></field>
-        <field name="name" title="${uiLabelMap.CommonName}" ><text/></field>
-        <field name="description" title="${uiLabelMap.CommonDescription}" ><text /></field>
-        <field name="submitButton" title="${uiLabelMap.CommonSubmit}"><submit button-type="button" /></field>
-    </form>
+    <form name="ActivitiProcessAndDeploymentList" type="list"
+		list-name="listIt" paginate-target="activitiProcessList"
+		default-entity-name="ActivitiProcessDefAndDeploy" separate-columns="true"
+		odd-row-style="alternate-row" header-row-style="header-row-2"
+		default-table-style="basic-table hover-bar">
+		<actions>
+			<service service-name="performFind" result-map="result"
+				result-map-list="listIt">
+				<field-map field-name="inputFields" from-field="activitiProcessDefAndDeployCtx" />
+				<field-map field-name="entityName" value="ActivitiProcessDefAndDeploy" />
+				<field-map field-name="orderBy" from-field="parameters.sortField" />
+				<field-map field-name="viewIndex" from-field="viewIndex" />
+				<field-map field-name="viewSize" from-field="viewSize" />
+				<field-map field-name="noConditionFind" value="Y" />
+			</service>
+			<set field="sortField" from-field="parameters.sortField" />
+		</actions>
+		<field name="id" title="${uiLabelMap.ProcessId}">
+			<display />
+		</field>
+		<field name="deploymentId" title="${uiLabelMap.DeploymentId}" >
+			<display />
+		</field>
+		<field name="name" title="${uiLabelMap.CommonName}">
+			<display />
+		</field>
+		<field name="key" title="${uiLabelMap.key}">
+			<display />
+		</field>
+		<field name="version" title="${uiLabelMap.CommonReleaseVersion}">
+			<display />
+		</field>
+		<field name="resourceName" title="${uiLabelMap.ResourceName}">
+			<hyperlink description="${resourceName}" target-window="_blank" target="readResource">
+				<parameter param-name="processDefinitionId" value="${id}"/>
+				<parameter param-name="resourceType" value="xml"/>
+			</hyperlink>
+		</field>
+		<field name="dgrmResourceName" title="${uiLabelMap.DgrmResourceName}">
+			<hyperlink description="${dgrmResourceName}" target-window="_blank" target="readResource">
+				<parameter param-name="processDefinitionId" value="${id}"/>
+				<parameter param-name="resourceType" value="image"/>
+			</hyperlink>
+		</field>
+		<field name="deployTime" title="${uiLabelMap.DeployTime}" sort-field="true">
+			<display description="${groovy:org.ofbiz.base.util.UtilDateTime.toDateString(deployTime,'yyyy-MM-dd HH:mm:ss')}" />
+		</field>
+		<field name="suspensionState" title="${uiLabelMap.Suspended}">
+			<!-- <display description="${groovy: suspensionState==2?'是':'否'}"/> -->
+			<hyperlink description="${groovy: suspensionState==2?'激活':'挂起'}" target="updateState" text="aaa">
+				<parameter param-name="processDefinitionId" from-field="id"/>
+				<parameter param-name="state" value="${groovy: suspensionState==2?'active':'suspend'}"/>
+			</hyperlink>
+		</field>
+		<field name="operate" title="${uiLabelMap.FormFieldTitle_actionEnumId}" >
+			<include-menu location="component://activiti/widget/ActivitiMenus.xml" name="ActivitProcessAction" />
+		</field>
+	</form>
+	
+	<!--  -->
+    <form name="StartedProcessList" type="list"
+		list-name="listIt" paginate-target="activitiProcessList"
+		default-entity-name="ActivitiProcessDefAndExecution" separate-columns="true"
+		odd-row-style="alternate-row" header-row-style="header-row-2"
+		default-table-style="basic-table hover-bar">
+		<actions>
+			<service service-name="performFind" result-map="result"
+				result-map-list="listIt">
+				<field-map field-name="inputFields" from-field="activitiProcessDefAndExecutionCtx" />
+				<field-map field-name="entityName" value="ActivitiProcessDefAndExecution" />
+				<field-map field-name="orderBy" from-field="parameters.sortField" />
+				<field-map field-name="viewIndex" from-field="viewIndex" />
+				<field-map field-name="viewSize" from-field="viewSize" />
+				<field-map field-name="noConditionFind" value="Y" />
+			</service>
+			<set field="sortField" from-field="parameters.sortField" />
+		</actions>
+		<field name="id" title="${uiLabelMap.ProcessExcutionId}">
+			<display />
+		</field>
+		<field name="procInstId" title="${uiLabelMap.ProcessInstanceId}" >
+			<display />
+		</field>
+		<field name="processDefinitionId" title="${uiLabelMap.ProcessId}">
+			<display />
+		</field>
+		<field name="currentNode" title="${uiLabelMap.CurrentNode}">
+			<display/>
+		</field>
+		<field name="suspensionState" title="${uiLabelMap.Suspended}">
+			<display description="${groovy: suspensionState==2?'是':'否'}"/>
+		</field>
+		<field name="operate" title="${uiLabelMap.FormFieldTitle_actionEnumId}" >
+			<hyperlink description="${groovy: suspensionState==2?'激活':'挂起'}" target="updateStateByStarted" text="aaa">
+				<parameter param-name="processDefinitionId" from-field="processDefinitionId"/>
+				<parameter param-name="state" value="${groovy: suspensionState==2?'active':'suspend'}"/>
+			</hyperlink>
+		</field>
+	</form>
 </forms>

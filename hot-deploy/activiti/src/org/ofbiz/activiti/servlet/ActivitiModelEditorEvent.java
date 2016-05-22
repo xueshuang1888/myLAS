@@ -181,6 +181,7 @@ public class ActivitiModelEditorEvent {
             
             jsonStr = "{'modelId':'"+modelData.getId()+"'}";
             //response.sendRedirect(request.getContextPath() + "/modeler.html?modelId=" + modelData.getId());
+            request.setAttribute("modelId", modelData.getId());
         } catch (Exception e) {
         	Debug.logWarning("Error saving model", module);
             Debug.logError("创建模型失败："+e, module);
@@ -188,12 +189,12 @@ public class ActivitiModelEditorEvent {
             jsonStr = "{'msg':'模型创建失败！'}";
         }
 		
-		try {
+		/*try {
 			writeJSONtoResponse(jsonStr, response);
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		return "success";
 	}
 	
