@@ -29,9 +29,15 @@
         
     </form>
     
+<<<<<<< HEAD
     <form name="EditActivitiModelLayerForm" type="single" target="createModel" title="${uiLabelMap.EditNewActivitiModel}" >
      	<field name="key" title="${uiLabelMap.key}" required-field="true" ><text /></field>
         <field name="name" title="${uiLabelMap.CommonName}" required-field="true"><text/></field>
+=======
+    <form name="EditActivitiModelLayerForm" type="single" target="createModel" title="EditNewActivitiModel">
+     	<field name="key" title="${uiLabelMap.key}" ><text /></field>
+        <field name="name" title="${uiLabelMap.CommonName}" ><text/></field>
+>>>>>>> refs/remotes/origin/working
         <field name="description" title="${uiLabelMap.CommonDescription}" ><text /></field>
         <field name="submitButton" title="${uiLabelMap.CommonSubmit}" >
         	<submit button-type="button" />
