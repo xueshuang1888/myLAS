@@ -47,5 +47,10 @@
 				<parameter param-name="deploymentId" value="${deploymentId}" />
 			</link>
 		</menu-item>
+		<menu-item name="startProcess" title="${uiLabelMap.StartProcess}" >
+			<link title="${uiLabelMap.StartProcess}" target="startActivityProcess"  >
+				<parameter param-name="processDefinitionId" value="${id}" />
+			</link>
+		</menu-item>
 	</menu>
 </menus>

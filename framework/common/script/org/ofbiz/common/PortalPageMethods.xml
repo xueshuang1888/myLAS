@@ -24,6 +24,7 @@ under the License.
     <simple-method method-name="setPortalPortletAttributes" short-description="Sets a PortalPortlet attributes">
         <if-not-empty field="parameters">
             <iterate-map map="parameters" key="attributeKey" value="attributeValue">
+            	<if-instance-of class="java.lang.String" field="attributeValue">
                 <if>
                     <condition>
                         <and>
@@ -33,6 +34,7 @@ under the License.
                         </and>
                     </condition>
                     <then>
+                    	<if-regexp field="attributeValue" expr="\w{0,255}" >
                         <log level="always" message="===2==processing: ${attributeKey}"></log>
                         <clear-field field="attributeEntityMap"/>
                         <set-service-fields service-name="createPortletAttribute" map="parameters" to-map="attributeEntityMap"/>
@@ -59,9 +61,11 @@ under the License.
                             <if-empty field="parameters.${attribute.attrName}">
                                 <remove-value value-field="attribute"/>
                             </if-empty>
-                        </iterate>                        
+                        </iterate>  
+                        </if-regexp>                      
                     </then>
                 </if>
+                </if-instance-of>
             </iterate-map>
         </if-not-empty>
     </simple-method>

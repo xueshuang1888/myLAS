@@ -95,7 +95,7 @@ public final class WidgetWorker {
             String localUrl = localWriter.toString();
             externalWriter.append(localUrl);
             boolean needsAmp = true;
-            if (localUrl.indexOf('?') == -1) {
+            if (localUrl.indexOf('?') == -1&&localRequestName.indexOf("?") == -1) {
                 externalWriter.append('?');
                 needsAmp = false;
             }

@@ -85,6 +85,11 @@
 			<redirect-parameter name="modelId" from="modelId" />
 		</response>
 	</request-map>
+	<request-map uri="startActivityProcess" >
+		<security https="true" auth="true" />
+		<event type="java" path="org.ofbiz.activiti.servlet.ActivitiProcessDefEvent" invoke="startProcess"/>
+        <response name="success" type="view" value="activitiProcessList" />
+	</request-map>
 	<request-map uri="updateState" >
 		<security https="true" auth="true" />
 		<event type="java" path="org.ofbiz.activiti.servlet.ActivitiProcessDefEvent" invoke="updateState"/>
@@ -100,6 +105,11 @@
 		<security https="true" auth="true" />
 		<event type="java" path="org.ofbiz.activiti.servlet.ActivitiProcessDefEvent" invoke="updateState"/>
         <response name="success" type="request-redirect" value="startedProcessList" />
+	</request-map>
+	<request-map uri="readTraceImage" >
+		<security https="true" auth="true" />
+		<event type="java" path="org.ofbiz.activiti.servlet.ActivitiProcessDefEvent" invoke="readTraceImage"/>
+        <response name="success" type="none" />
 	</request-map>
 
 	<!-- View Mappings -->

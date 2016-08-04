@@ -246,6 +246,7 @@ public class ActivitiModelEditorEvent {
 		return "success";
 	}
 	
+	
 	private static void writeJSONtoResponse( String jsonStr, HttpServletResponse response) throws UnsupportedEncodingException {
         if (jsonStr == null) {
             Debug.logError("JSON Object was empty; fatal error!", module);
