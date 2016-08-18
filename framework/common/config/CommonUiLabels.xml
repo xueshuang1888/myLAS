@@ -10906,9 +10906,9 @@
         <value xml:lang="ru">Область</value>
         <value xml:lang="th">รัฐ</value>
         <value xml:lang="vi">Tỉnh</value>
-        <value xml:lang="zh">州</value>
-        <value xml:lang="zh-CN">州</value>
-        <value xml:lang="zh-TW">州</value>
+        <value xml:lang="zh">省</value>
+        <value xml:lang="zh-CN">省</value>
+        <value xml:lang="zh-TW">省</value>
     </property>
     <property key="CommonStateProvince">
         <value xml:lang="ar">ولاية/إقليم</value>

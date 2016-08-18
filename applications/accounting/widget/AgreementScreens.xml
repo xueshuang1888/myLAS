@@ -124,7 +124,9 @@ under the License.
                 <set field="tabButtonItem" value="AgreementMain"/>
                 <set field="agreementId" from-field="parameters.agreementId"/>
                 <entity-one entity-name="Agreement" value-field="agreement"/>
-                
+                <set field="layoutSettings.javaScripts[]" value="/images/ueditor/ueditor.config.js" global="true"/>
+                <set field="layoutSettings.javaScripts[]" value="/images/ueditor/ueditor.all.js" global="true"/>
+                <set field="layoutSettings.javaScripts[]" value="/images/ueditor/lang/zh-cn/zh-cn.js" global="true"/>
             </actions>
             <widgets>
                 <decorator-screen name="CommonAgreementDecorator" location="${parameters.agreementDecoratorLocation}">

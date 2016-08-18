@@ -38,8 +38,10 @@ completedTreeContext = [];
 subtopLists = [];
 
 //internalOrg list
-partyRelationships = from("PartyRelationship").where("partyIdFrom", partyId, "partyRelationshipTypeId", "GROUP_ROLLUP").filterByDate().queryList();
-if (partyRelationships) {
+System.out.println("default============"+partyId);
+//partyRelationships = from("PartyRelationship").where("partyIdFrom", partyId, "partyRelationshipTypeId", "GROUP_ROLLUP").filterByDate().queryList();
+partyRelationships = from("PartyRelationship").where("partyIdFrom",partyId,"partyRelationshipTypeId","GROUP_ROLLUP").filterByDate().queryCount();
+if (partyRelationships>0) {
     //root
     partyRoot = from("PartyGroup").where("partyId", partyId).queryOne();
     partyRootMap = [:];
@@ -47,16 +49,17 @@ if (partyRelationships) {
     partyRootMap.put("groupName", partyRoot.getString("groupName"));
 
     //child
-    for(partyRelationship in partyRelationships) {
+    /*for(partyRelationship in partyRelationships) {
         partyGroupMap = [:];
         partyGroupMap.put("partyId", partyRelationship.getString("partyIdTo"));
         partyGroupMap.put("groupName", PartyHelper.getPartyName(delegator, partyRelationship.getString("partyIdTo"), false));
         completedTreeContext.add(partyGroupMap);
 
         subtopLists.addAll(partyRelationship.getString("partyIdTo"));
-    }
+    }*/
 
-    partyRootMap.put("child", completedTreeContext);
+    //partyRootMap.put("child", completedTreeContext);
+    partyRootMap.put("child",partyRelationships);
     completedTree.add(partyRootMap);
 }
 
