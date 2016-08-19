@@ -36,6 +36,7 @@
 		</section>
 	</screen>
 	
+	<!-- 模型列表  -->
 	<screen name="ActivitiModelWorkspace">
 		<section>
 			<actions>
@@ -61,6 +62,7 @@
 		</section>
 	</screen>
 	
+	<!-- 新建模型  -->
 	<screen name="EditActivitiModelLayer">
 		<section>
 			<actions>
@@ -73,6 +75,7 @@
 		</section>
 	</screen>
 
+	<!-- 流程定义及部署列表  -->
 	<screen name="ActivitiProcessList">
 		<section>
 			<actions>
@@ -94,7 +97,7 @@
 		</section>
 	</screen>
 	
-	<!--  -->
+	<!-- 运行中的流程  -->
 	<screen name="StartedProcessList">
 		<section>
 			<actions>

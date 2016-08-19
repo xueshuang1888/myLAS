@@ -125,8 +125,11 @@
 		<field name="processDefinitionId" title="${uiLabelMap.ProcessId}">
 			<display />
 		</field>
-		<field name="currentNode" title="${uiLabelMap.CurrentNode}">
-			<display/>
+		<field name="currentNode" title="${uiLabelMap.CurrentNode}" action="javascript:void(0);" event="onclick" encode-output="false">
+			<hyperlink target="readTraceImage"  description="${taskName}" style="trace" encode="true" target-window="_blank" >
+				<parameter param-name="executionId" from-field="id"/>
+				<parameter param-name="processDefinitionId" from-field="processDefinitionId"/>
+			</hyperlink>
 		</field>
 		<field name="suspensionState" title="${uiLabelMap.Suspended}">
 			<display description="${groovy: suspensionState==2?'是':'否'}"/>

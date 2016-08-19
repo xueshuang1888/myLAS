@@ -2,9 +2,13 @@ package org.ofbiz.activiti;
 
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.activiti.engine.FormService;
+import org.activiti.engine.HistoryService;
+import org.activiti.engine.IdentityService;
 import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngineConfiguration;
 import org.activiti.engine.RepositoryService;
+import org.activiti.engine.RuntimeService;
 import org.ofbiz.base.lang.Factory;
 import org.ofbiz.base.util.Debug;
 
@@ -34,6 +38,25 @@ public abstract class ActivitiProcessEngineFactory implements Factory<ProcessEng
     public static RepositoryService getRepositoryService(){  
         return getRepositoryService("default");  
     }  
+    
+    public static RuntimeService getRuntimeService(){
+    	
+    	return getProcessEngine().getRuntimeService();
+    }
+    
+    public static IdentityService getIdentityService(){
+    	
+    	return getProcessEngine().getIdentityService();
+    }
+    
+    public static FormService getFormService(){
+    	return getProcessEngine().getFormService();
+    }
+    
+    public static HistoryService getHistoryService(){
+    	return getProcessEngine().getHistoryService();
+    }
+    
     public static void init(ProcessEngine pe,String name){  
         ActivitiProcessEngineFactory.processEngineCache.put(name,pe);  
     }  

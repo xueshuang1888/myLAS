@@ -92,21 +92,52 @@
 		<field name="lockTime" type="timestamp" col-name="LOCK_TIME_"/>
 	</entity>
 	
+	<entity entity-name="ActivityTask" package-name="org.ofbiz.entity.activiti" table-name="ACT_RU_TASK" no-auto-stamp="true">
+		<description>流程任务</description>
+		<field name="id" type="id-mlong" col-name="ID_"/>
+		<field name="rev" type="int" col-name="REV_"/>
+		<field name="executionId" type="id-mlong" col-name="EXECUTION_ID_"/>
+		<field name="procInstId" type="id-mlong" col-name="PROC_INST_ID_"/>
+		<field name="procDefId" type="id-mlong" col-name="PROC_DEF_ID_"/>
+		<field name="name" type="comment" col-name="NAME_"/>
+		<field name="parentTaskId" type="id-mlong" col-name="PARENT_TASK_ID_"/>
+		<field name="description" type="comment-long" col-name="DESCRIPTION_"/>
+		<field name="taskDefKey" type="comment" col-name="TASK_DEF_KEY_"/>
+		<field name="owner" type="comment" col-name="OWNER_"/>
+		<field name="assignee" type="comment" col-name="ASSIGNEE_"/>
+		<field name="delegation" type="id-mlong" col-name="DELEGATION_"/>
+		<field name="priority" type="int" col-name="PRIORITY_"/>
+		<field name="createTime" type="timestamp" col-name="CREATE_TIME_"/>
+		<field name="dueDate" type="timestamp" col-name="DUE_DATE_"/>
+		<field name="category" type="comment" col-name="CATEGORY_"/>
+		<field name="suspensionState" type="int" col-name="SUSPENSION_STATE_"/>
+		<field name="tenantId" type="comment" col-name="TENANT_ID_"/>
+		<field name="formKey" type="int" col-name="FORM_KEY_"/>
+	</entity>
+	
 	<view-entity entity-name="ActivitiProcessDefAndExecution" package-name="org.ofbiz.entity.activiti" >
 		<description>已启动流程</description>
 		<member-entity entity-alias="AE" entity-name="ActivitiExecution" />
 		<member-entity entity-alias="APD" entity-name="ActivitiProcDef"/>
+		<member-entity entity-alias="AT" entity-name="ActivityTask"/>
 		<alias-all entity-alias="AE" />
 		<alias entity-alias="APD" name="processDefinitionKey" field="key"/>
 		<alias entity-alias="APD" name="processDefinitionId" field="id"/>
 		<alias entity-alias="APD" name="processDefinitionName" field="name"/>
 		<alias entity-alias="APD" name="processDefinitionVersion" field="version"/>
 		<alias entity-alias="APD" name="deploymentId" field="deploymentId"/>
+		<alias entity-alias="AT" name="taskName" field="name"/>
 		<view-link rel-entity-alias="APD" entity-alias="AE">
 			<key-map field-name="procDefId" rel-field-name="id"/>
 		</view-link>
+		<view-link rel-entity-alias="AT" entity-alias="AE">
+			<key-map field-name="id" rel-field-name="procInstId"/>
+		</view-link>
 		<entity-condition >
-			<condition-expr field-name="parentId" entity-alias="AE" operator="equals" value=""/>
+			<condition-list>
+				<condition-expr field-name="parentId" entity-alias="AE" operator="equals" value=""/>
+				<condition-expr field-name="suspensionState" entity-alias="AT" operator="equals" value="1"/>
+			</condition-list>
 		</entity-condition>
 	</view-entity>
 </entitymodel>

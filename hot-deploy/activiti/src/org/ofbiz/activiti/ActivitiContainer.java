@@ -1,9 +1,13 @@
 package org.ofbiz.activiti;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngineConfiguration;
+import org.activiti.engine.form.AbstractFormType;
+import org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl;
 import org.ofbiz.base.container.Container;
 import org.ofbiz.base.container.ContainerConfig;
 import org.ofbiz.base.container.ContainerException;
@@ -35,8 +39,8 @@ public class ActivitiContainer implements Container {
         pecfg.setJdbcPassword(jdbc.getProperty("password"));  
         pecfg.setJdbcUrl(jdbc.getProperty("url"));  
         pecfg.setJdbcDriver(jdbc.getProperty("driver"));  
-        pecfg.setLabelFontName("微软雅黑");
-        pecfg.setActivityFontName("微软雅黑");
+        pecfg.setLabelFontName("宋体");
+        pecfg.setActivityFontName("宋体");
         
         //连接池设置  
         pecfg.setJdbcMaxActiveConnections(Integer.valueOf(jdbc.getProperty("jdbcMaxActiveConnections")));  
@@ -46,10 +50,18 @@ public class ActivitiContainer implements Container {
   
         //设置启动检查数据表  
         pecfg.setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_TRUE);  
+        
+        ProcessEngineConfigurationImpl processEngineConfigurationImpl = (ProcessEngineConfigurationImpl) pecfg;
+        List<AbstractFormType> customFormTypes = new ArrayList<AbstractFormType>();
+        customFormTypes.add(new UsersFormType());
+        processEngineConfigurationImpl.setCustomFormTypes(customFormTypes);
+        
+        
   
         //创建表并获取流程引擎  
-        ProcessEngine pe = pecfg.buildProcessEngine();  
-  
+        ProcessEngine pe = processEngineConfigurationImpl.buildProcessEngine();  
+        
+        
         //todo 加载初始化流程  
   
         //初始化工作流引擎工厂  
