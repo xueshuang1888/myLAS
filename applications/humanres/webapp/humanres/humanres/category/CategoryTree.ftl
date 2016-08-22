@@ -57,34 +57,35 @@ var rawdata = [
         $.cookie('jstree_open', null);
         
         jQuery("#tree").jstree({
-        "core" : { "initially_open" : [ "${partyId}" ] },
-        "plugins" : [ "themes", "json_data","ui" ,"cookies", "types", "crrm", "contextmenu"],
+        	"core" : { "initially_open" : [ "${partyId}" ] },
+        	"plugins" : [ "themes", "json_data","ui" ,"cookies", "types", "crrm", "contextmenu"],
             "json_data" : {
                 "data" : rawdata,
-                          "ajax" : { "url" : "<@ofbizUrl>getHRChild</@ofbizUrl>", "type" : "POST",
-                          "data" : function (n) {
-                            return { 
+                "ajax" : { 
+                	"url" : "<@ofbizUrl>getHRChild</@ofbizUrl>", "type" : "POST",
+                    "data" : function (n) {
+                    	return { 
                                 "partyId" : n.attr ? n.attr("id").replace("node_","") : 1 ,
                                 "additionParam" : "','category" ,
                                 "hrefString" : "viewprofile?partyId=" ,
                                 "onclickFunction" : "callDocument"
                         }; 
                     },
-                              success : function(data) {
-                                  return data.hrTree;
-                              }
+                   success : function(data) {
+                   		return data.hrTree;
+                   }
                 }
             },
             "types" : {
-             "valid_children" : [ "root" ],
-             "types" : {
-                 "CATEGORY" : {
-                     "icon" : { 
-                         "image" : "/images/jquery/plugins/jsTree/themes/apple/d.png",
-                         "position" : "10px40px"
-                     }
-                 }
-             }
+            	"valid_children" : [ "root" ],
+            	"types" : {
+                	"CATEGORY" : {
+                    	"icon" : { 
+                        	"image" : "/images/jquery/plugins/jsTree/themes/apple/d.png",
+                        	"position" : "10px40px"
+                     	}
+                	}
+             	}
             },
             "contextmenu": {items: customMenu}
         });

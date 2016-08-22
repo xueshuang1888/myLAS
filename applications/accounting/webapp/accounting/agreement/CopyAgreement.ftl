@@ -41,3 +41,8 @@ under the License.
   </div>
 </div>
 </#if>
+<script type="text/javascript">
+jQuery("#EditAgreement_textData").css("width","95%");
+var ue = UE.getEditor('EditAgreement_textData',{autoHeightEnabled: false,
+    autoFloatEnabled: false,initialFrameHeight: 300 });
+</script>

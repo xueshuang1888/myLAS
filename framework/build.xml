@@ -27,7 +27,7 @@ under the License.
                minilang/build.xml,
                webapp/build.xml,widget/build.xml,
                common/build.xml,datafile/build.xml,
-               testtools/build.xml,
+               testtools/build.xml,images/build.xml,
                webtools/build.xml"/>
 
     <filelist id="test-builds" dir="framework" files="base/build.xml,entity/build.xml"/>

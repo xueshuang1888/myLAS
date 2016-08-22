@@ -17,7 +17,7 @@ specific language governing permissions and limitations
 under the License.
 -->
 <script type="text/javascript">
-    $("#dialog").dialog('open');
+    //$("#dialog").dialog('open');
     $(function() {
         $( "#internalOrg" ).dialog({ autoOpen: true, width: 350});
     });
