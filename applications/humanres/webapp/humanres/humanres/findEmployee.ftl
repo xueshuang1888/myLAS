@@ -24,11 +24,11 @@ under the License.
         <ul>
             <li class="h3">${uiLabelMap.CommonFind} ${uiLabelMap.HumanResEmployee}</li>
             <#if parameters.hideFields?default("N") == "Y">
-                <li><a href="<@ofbizUrl>findEmployees?hideFields=N${paramList}</@ofbizUrl>">${uiLabelMap.CommonShowLookupFields}</a></li>
+                <#-- <li><a href="<@ofbizUrl>findEmployees?hideFields=N${paramList}</@ofbizUrl>">${uiLabelMap.CommonShowLookupFields}</a></li> -->
             <#else>
             <#if partyList??><li><a href="<@ofbizUrl>findEmployees?hideFields=Y${paramList}</@ofbizUrl>">${uiLabelMap.CommonHideFields}</a></li></#if>
-                <li><a href="javascript:document.lookupparty.submit();">${uiLabelMap.PartyLookupParty}</a></li>
-            </#if>
+                <#-- <li><a href="javascript:document.lookupparty.submit();">${uiLabelMap.PartyLookupParty}</a></li> -->
+			</#if>
         </ul>
         <br class="clear"/>
     </div>

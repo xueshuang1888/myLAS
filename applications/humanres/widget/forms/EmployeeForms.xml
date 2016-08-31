@@ -27,7 +27,7 @@
         <field name="middleName" title="${uiLabelMap.PartyMiddleInitial}"><text size="4" maxlength="4"/></field>
         <field name="lastName" required-field="true"><text/></field>
         <field name="partyIdFrom" title="${uiLabelMap.OrderOrderEntryInternalOrganization}" required-field="true">
-            <drop-down allow-empty="true">
+            <drop-down allow-empty="true" >
                 <entity-options entity-name="PartyRoleNameDetail" key-field-name="partyId" description="${groupName}">
                     <entity-constraint name="roleTypeId" operator="equals" value="INTERNAL_ORGANIZATIO"/>
                 </entity-options>
@@ -40,11 +40,20 @@
         <field name="address1" title="${uiLabelMap.CommonAddress1}" required-field="true"><text size="30" maxlength="60"/></field>
         <field name="address2" title="${uiLabelMap.CommonAddress2}"><text size="30" maxlength="60"/></field>
         <field name="city" title="${uiLabelMap.CommonCity}" required-field="true"><text size="30" maxlength="60"/></field>
+        <field name="regionGeoId" title="${uiLabelMap.CommonRegion}" required-field="true">
+            <drop-down allow-empty="true">
+                <entity-options entity-name="Geo" key-field-name="geoId" description="${geoName} - ${geoId}">
+                    <entity-constraint name="geoTypeId" operator="equals" value="COUNTY"/>
+                    <entity-order-by field-name="geoId"/>
+                </entity-options>
+            </drop-down>
+        </field>
         <field name="stateProvinceGeoId" title="${uiLabelMap.CommonState}" required-field="true">
             <drop-down allow-empty="true">
                 <entity-options entity-name="Geo" key-field-name="geoId" description="${geoName} - ${geoId}">
-                    <entity-constraint name="geoTypeId" operator="in" value="STATE,PROVINCE"/>
-                    <entity-order-by field-name="geoName"/>
+                    <!-- <entity-constraint name="geoTypeId" operator="in" value="STATE,PROVINCE"/> -->
+                    <entity-constraint name="geoId" operator="like" value="CN%"/>
+                    <entity-order-by field-name="geoId"/>
                 </entity-options>
             </drop-down>
         </field>
