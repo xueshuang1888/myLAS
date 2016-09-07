@@ -5592,7 +5592,7 @@
         <value xml:lang="ru">Создать клиента</value>
         <value xml:lang="th">สร้างลูกค้า</value>
         <value xml:lang="vi">Tạo mới khách hàng</value>
-        <value xml:lang="zh">创建客户</value>
+        <value xml:lang="zh">新建客户</value>
         <value xml:lang="zh-TW">新建客戶</value>
     </property>
     <property key="PartyCreateNewEftAccount">
@@ -5630,7 +5630,7 @@
         <value xml:lang="ru">Создать работника</value>
         <value xml:lang="th">สร้างพนักงาน</value>
         <value xml:lang="vi">Tạo mới nhân viên</value>
-        <value xml:lang="zh">创建职员</value>
+        <value xml:lang="zh">新建员工</value>
         <value xml:lang="zh-TW">新建員工</value>
     </property>
     <property key="PartyCreateNewGiftCard">
@@ -8164,7 +8164,7 @@
         <value xml:lang="ru">Искать участника</value>
         <value xml:lang="th">ค้นหากลุ่มผู้ใช้</value>
         <value xml:lang="vi">Tìm kiếm tác nhân</value>
-        <value xml:lang="zh">查找会员</value>
+        <value xml:lang="zh">查找</value>
         <value xml:lang="zh-TW">尋找團體</value>
     </property>
     <property key="PartyLookupPartyAndUserLoginAndPerson">
@@ -9770,7 +9770,7 @@
         <value xml:lang="ru">Это не может быть изменено без повторного создания группы безопасности.</value>
         <value xml:lang="th">นี่ไม่สามารถเปลี่ยนแปลงได้หากปราศจากการสร้างกลุ่มความปลอดภัย</value>
         <value xml:lang="vi">Thông tin này không thể được cập nhật trừ khi tạo mới lại nhóm phân quyền.</value>
-        <value xml:lang="zh">如果不重新创建安全组的话，不能修改这个。</value>
+        <value xml:lang="zh">如果不重新创建角色的话，不能修改这个。</value>
         <value xml:lang="zh-TW">如果不重新新建安全群組的話,不能修改這個.</value>
     </property>
     <property key="PartyNotificationMailActivated">
@@ -10070,7 +10070,7 @@
         <value xml:lang="ru">Найдены участники</value>
         <value xml:lang="th">กลุ่มผู้ใช้พบ</value>
         <value xml:lang="vi">Các tác nhân được tìm thấy</value>
-        <value xml:lang="zh">会员找到了</value>
+        <value xml:lang="zh">查找结果</value>
         <value xml:lang="zh-TW">找到團體</value>
     </property>
     <property key="PartyParty">
@@ -10746,7 +10746,7 @@
         <value xml:lang="ru">Права для группы безопасности с кодом</value>
         <value xml:lang="th">การอนุญาตสำหรับกลุ่มความปลอดภัยกับรหัส</value>
         <value xml:lang="vi">Quyền dành cho nhóm phân quyền với Id</value>
-        <value xml:lang="zh">安全组的权限，标识</value>
+        <value xml:lang="zh">角色的权限，标识</value>
         <value xml:lang="zh-TW">安全群組的權限其識別為 </value>
     </property>
     <property key="PartyPersonSuccessfullyCreated">
@@ -11184,7 +11184,7 @@
         <value xml:lang="ja">セキュリティグループに対する制限ビュー</value>
         <value xml:lang="pt-BR">Vistas protegidas para o grupo de segurança</value>
         <value xml:lang="vi">Bảo vệ quyền xem cho nhóm phân quyền</value>
-        <value xml:lang="zh">受保护的视图用于安全组</value>
+        <value xml:lang="zh">受保护的视图用于角色</value>
         <value xml:lang="zh-TW">受保護的檢視用於安全群組</value>
     </property>
     <property key="PartyProvinceInCanadaMissing">
@@ -11971,7 +11971,7 @@
         <value xml:lang="ru">Группа безопасности</value>
         <value xml:lang="th">กลุ่มความปลอดภัย</value>
         <value xml:lang="vi">Nhóm quyền</value>
-        <value xml:lang="zh">安全组</value>
+        <value xml:lang="zh">角色</value>
         <value xml:lang="zh-TW">安全群組</value>
     </property>
     <property key="PartySecurityGroupCreatePermissionError">
@@ -13379,7 +13379,7 @@
         <value xml:lang="ru">Имя пользователя</value>
         <value xml:lang="th">ผู้เข้าใช้ระบบ</value>
         <value xml:lang="vi">Người dùng truy nhập</value>
-        <value xml:lang="zh">用户登录</value>
+        <value xml:lang="zh">登录用户</value>
         <value xml:lang="zh-TW">使用者登入</value>
     </property>
     <property key="PartyUserLoginMissingError">

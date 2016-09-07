@@ -250,7 +250,7 @@
         <value xml:lang="pt-BR">Id da posição do empregado</value>
         <value xml:lang="th">รหัสตำแหน่งพนักงาน</value>
         <value xml:lang="vi">Vị trí nhân sự</value>
-        <value xml:lang="zh">雇员职位编号</value>
+        <value xml:lang="zh">员工职位编号</value>
         <value xml:lang="zh-TW">員工職位識別</value>
     </property>
     <property key="FormFieldTitle_emplPositionIdManagedBy">
@@ -281,7 +281,7 @@
         <value xml:lang="pt-BR">Id do empregado</value>
         <value xml:lang="th">รหัสกลุ่มพนักงาน</value>
         <value xml:lang="vi">Id nhân sự</value>
-        <value xml:lang="zh">雇员编号</value>
+        <value xml:lang="zh">员工编号</value>
         <value xml:lang="zh-TW">員工識別</value>
     </property>
     <property key="FormFieldTitle_employeeRoleTypeId">
@@ -292,7 +292,7 @@
         <value xml:lang="pt-BR">Id do tipo de papel do empregado</value>
         <value xml:lang="th">รหัสประเภทสถานะพนักงาน</value>
         <value xml:lang="vi">Loại vai trò nhân sự</value>
-        <value xml:lang="zh">雇员角色类型编号</value>
+        <value xml:lang="zh">员工角色类型编号</value>
         <value xml:lang="zh-TW">員工角色類型識別</value>
     </property>
     <property key="FormFieldTitle_employmentAppSourceTypeId">
@@ -462,7 +462,7 @@
         <value xml:lang="pt-BR">Id do Diretor</value>
         <value xml:lang="th">การจัดการรหัสกลุ่มผู้ใช้</value>
         <value xml:lang="vi">Nhà quản lý</value>
-        <value xml:lang="zh">该雇员经理</value>
+        <value xml:lang="zh">该员工经理</value>
         <value xml:lang="zh-TW">該員工經理</value>
     </property>
     <property key="FormFieldTitle_managerRoleTypeId">
@@ -877,7 +877,7 @@
         <value xml:lang="ja">従業員休職を追加</value>
         <value xml:lang="pt-BR">Adicionar licença de empregado</value>
         <value xml:lang="vi">Thêm nhân sự Nghỉ phép</value>
-        <value xml:lang="zh">新建雇员请假</value>
+        <value xml:lang="zh">新建员工请假</value>
         <value xml:lang="zh-TW">新建員工請假</value>
     </property>
     <property key="HumanResAddEmplLeaveReasonType">
@@ -886,7 +886,7 @@
         <value xml:lang="ja">従業員休職理由を追加</value>
         <value xml:lang="pt-BR">Adicionar razão para licença de empregado</value>
         <value xml:lang="vi">Thêm Lý do nghỉ phép</value>
-        <value xml:lang="zh">添加雇员离职原因</value>
+        <value xml:lang="zh">添加员工离职原因</value>
         <value xml:lang="zh-TW">增加員工離職原因</value>
     </property>
     <property key="HumanResAddEmplLeaveType">
@@ -896,7 +896,7 @@
         <value xml:lang="ja">従業員休職種類を追加</value>
         <value xml:lang="pt-BR">Adicionar tipos de licença de empregado</value>
         <value xml:lang="vi">Thêm kiểu Nghỉ việc</value>
-        <value xml:lang="zh">新建雇员请假类型</value>
+        <value xml:lang="zh">新建员工请假类型</value>
         <value xml:lang="zh-TW">新建員工請假類型</value>
     </property>
     <property key="HumanResAddEmplPositionFulfillment">
@@ -906,7 +906,7 @@
         <value xml:lang="ja">職位遂行を追加</value>
         <value xml:lang="pt-BR">Adicionar desempenho de posição</value>
         <value xml:lang="vi">Thêm hoàn thành tuyển dụng</value>
-        <value xml:lang="zh">新建属于该职位雇员</value>
+        <value xml:lang="zh">新建属于该职位员工</value>
         <value xml:lang="zh-TW">新建屬於該職位員工</value>
     </property>
     <property key="HumanResAddEmplPositionResponsibility">
@@ -1006,7 +1006,7 @@
         <value xml:lang="ja">従業員職位報告階層を追加 [${parameters.emplPositionId} に報告]</value>
         <value xml:lang="pt-BR">Adicionar estrutura de relatório de posição de empregado [Relatado para ${parameters.emplPositionId}]</value>
         <value xml:lang="vi">Thêm Cấu trúc báo cáo vị trí nhân sự [Báo cáo đến ${parameters.emplPositionId}]</value>
-        <value xml:lang="zh">新建雇员职位级别结构 [上级为 ${parameters.emplPositionId}]</value>
+        <value xml:lang="zh">新建员工职位级别结构 [上级为 ${parameters.emplPositionId}]</value>
         <value xml:lang="zh-TW">新建員工職位級別結構 [上級為 ${parameters.emplPositionId}]</value>
     </property>
     <property key="HumanResAddReportsToEmplPositionReportingStruct">
@@ -1016,7 +1016,7 @@
         <value xml:lang="ja">従業員職位報告階層を追加 [${parameters.emplPositionId} から報告]</value>
         <value xml:lang="pt-BR">Adicionar estrutura de relatório de posição de empregado [${parameters.emplPositionId} se relata a]</value>
         <value xml:lang="vi">Thêm Cấu trúc báo cáo vị trí nhân sự [${parameters.emplPositionId} Báo cáo đến]</value>
-        <value xml:lang="zh">新建雇员职位级别结构 [${parameters.emplPositionId}的上级为]</value>
+        <value xml:lang="zh">新建员工职位级别结构 [${parameters.emplPositionId}的上级为]</value>
         <value xml:lang="zh-TW">新建員工職位級別結構 [${parameters.emplPositionId}的上級為]</value>
     </property>
     <property key="HumanResAddSalaryStep">
@@ -1190,7 +1190,7 @@
         <value xml:lang="ja">従業員休職を編集</value>
         <value xml:lang="pt-BR">Alterar licença de empregado</value>
         <value xml:lang="vi">Cập nhật nhân sự Xin nghỉ phép</value>
-        <value xml:lang="zh">编辑雇员请假</value>
+        <value xml:lang="zh">编辑员工请假</value>
         <value xml:lang="zh-TW">編輯員工請假</value>
     </property>
     <property key="HumanResEditEmplLeaveType">
@@ -1200,7 +1200,7 @@
         <value xml:lang="ja">従業員休職種類を編集</value>
         <value xml:lang="pt-BR">Alterar tipo de licença de empregado</value>
         <value xml:lang="vi">Sửa đổi kiểu Xin nghỉ phép</value>
-        <value xml:lang="zh">编辑雇员请假类型</value>
+        <value xml:lang="zh">编辑员工请假类型</value>
         <value xml:lang="zh-TW">編輯員工請假類型</value>
     </property>
     <property key="HumanResEditEmplPosition">
@@ -1210,7 +1210,7 @@
         <value xml:lang="ja">従業員職位を編集</value>
         <value xml:lang="pt-BR">Alterar posição de empregado</value>
         <value xml:lang="vi">Cập nhật Vị trí</value>
-        <value xml:lang="zh">编辑雇员职位</value>
+        <value xml:lang="zh">编辑员工职位</value>
         <value xml:lang="zh-TW">編輯員工職位</value>
     </property>
     <property key="HumanResEditEmplPositionReportingStruct">
@@ -1221,7 +1221,7 @@
         <value xml:lang="pt-BR">Alterar estrutura de relatórios de posição de empregados</value>
         <value xml:lang="th">แก้ไขโครงสร้างรายงานตำแหน่งพนักงาน</value>
         <value xml:lang="vi">Cập nhật Cấu trúc báo cáo vị trí nhân sự</value>
-        <value xml:lang="zh">编辑雇员职位级别结构</value>
+        <value xml:lang="zh">编辑员工职位级别结构</value>
         <value xml:lang="zh-TW">編輯員工職位級別結構</value>
     </property>
     <property key="HumanResEditEmplPositionType">
@@ -1415,7 +1415,7 @@
         <value xml:lang="ja">従業員休職種類</value>
         <value xml:lang="pt-BR">Tipo de licença de empregado</value>
         <value xml:lang="vi">Kiểu Nghỉ phép</value>
-        <value xml:lang="zh">雇员请假类型类型</value>
+        <value xml:lang="zh">员工请假类型类型</value>
         <value xml:lang="zh-TW">員工請假類型類型</value>
     </property>
     <property key="HumanResEmplPartyIdFromNotSpecified">
@@ -1435,7 +1435,7 @@
         <value xml:lang="pt-BR">Id de posição de empregado</value>
         <value xml:lang="th">รหัสตำแหน่งพนักงาน</value>
         <value xml:lang="vi">Vị trí nhân sự</value>
-        <value xml:lang="zh">雇员职位编号</value>
+        <value xml:lang="zh">员工职位编号</value>
         <value xml:lang="zh-TW">員工職位識別</value>
     </property>
     <property key="HumanResEmplPositionIdManagedBy">
@@ -1547,7 +1547,7 @@
         <value xml:lang="ja">従業員</value>
         <value xml:lang="pt-BR">um empregado</value>
         <value xml:lang="vi">Nhân viên</value>
-        <value xml:lang="zh">雇员</value>
+        <value xml:lang="zh">员工</value>
         <value xml:lang="zh-TW">員工</value>
     </property>
     <property key="HumanResEmployeeLeave">
@@ -1575,7 +1575,7 @@
         <value xml:lang="pt-BR">Id do participante empregado</value>
         <value xml:lang="th">ถึงรหัสกลุ่มผู้ใช้</value>
         <value xml:lang="vi">Id Nhân sự</value>
-        <value xml:lang="zh">雇员系统编号</value>
+        <value xml:lang="zh">员工系统编号</value>
         <value xml:lang="zh-TW">員工團體識別</value>
     </property>
     <property key="HumanResEmployeePosition">
@@ -1629,7 +1629,7 @@
         <value xml:lang="ja">従業員</value>
         <value xml:lang="pt-BR">Empregados</value>
         <value xml:lang="vi">Nhân viên</value>
-        <value xml:lang="zh">人事管理</value>
+        <value xml:lang="zh">人员管理</value>
         <value xml:lang="zh-TW">人事管理</value>
     </property>
     <property key="HumanResEmployment">
@@ -1675,7 +1675,7 @@
         <value xml:lang="ja">従業員が職務する内部組織</value>
         <value xml:lang="pt-BR">Organização interna para a qual o empregado trabalha</value>
         <value xml:lang="vi">Làm việc tại</value>
-        <value xml:lang="zh">雇员工作的内部组织</value>
+        <value xml:lang="zh">员工工作的内部组织</value>
         <value xml:lang="zh-TW">員工工作的內部組織</value>
     </property>
     <property key="HumanResEstimatedFromDate">
@@ -1697,7 +1697,7 @@
         <value xml:lang="ja">従業員休職を検索</value>
         <value xml:lang="pt-BR">Encontrar licença de empregado</value>
         <value xml:lang="vi">Tra cứu nhân sự đã Nghỉ phép</value>
-        <value xml:lang="zh">查找雇员请假</value>
+        <value xml:lang="zh">查找员工请假</value>
         <value xml:lang="zh-TW">尋找員工請假</value>
     </property>
     <property key="HumanResFindEmplPosition">
@@ -1708,7 +1708,7 @@
         <value xml:lang="ja">従業員職位を検索</value>
         <value xml:lang="pt-BR">Encontrar posição de empregado</value>
         <value xml:lang="vi">Tra cứu vị trí nhân sự</value>
-        <value xml:lang="zh">查找雇员职位</value>
+        <value xml:lang="zh">查找员工职位</value>
         <value xml:lang="zh-TW">尋找員工職位</value>
     </property>
     <property key="HumanResFindEmployment">
@@ -2035,7 +2035,7 @@
         <value xml:lang="pt-BR">Procurar posição por nome</value>
         <value xml:lang="th">ค้นหาตำแหน่งพนักงานโดยชื่อ</value>
         <value xml:lang="vi">Chọn Nhân sự theo Tên</value>
-        <value xml:lang="zh">按名称的雇员职位查询</value>
+        <value xml:lang="zh">按名称的员工职位查询</value>
         <value xml:lang="zh-TW">按名稱查詢員工職位</value>
     </property>
     <property key="HumanResLookupEmploymentApp">
@@ -2174,14 +2174,14 @@
     </property>
     <property key="HumanResManager">
         <value xml:lang="de">Personalverwaltung</value>
-        <value xml:lang="en">Human Resources</value>
+        <value xml:lang="en">System Management</value>
         <value xml:lang="fr">Application de gestion des ressources humaines</value>
         <value xml:lang="it">Gestione risorse umane</value>
         <value xml:lang="ja">人事管理</value>
         <value xml:lang="pt-BR">Recursos Humanos</value>
         <value xml:lang="th">โปรแกรมประยุกต์ใช้การจัดการบุคคล</value>
         <value xml:lang="vi">Nguồn lực Nhân sự</value>
-        <value xml:lang="zh">人力资源管理系统</value>
+        <value xml:lang="zh">系统管理</value>
         <value xml:lang="zh-TW">人力資源管理系統</value>
     </property>
     <property key="HumanResManagerApplication">
@@ -2221,7 +2221,7 @@
         <value xml:lang="pt-BR">Nova posição de empregado</value>
         <value xml:lang="th">ตำแหน่งพนักงานใหม่</value>
         <value xml:lang="vi">Thêm mới Vị trí nhân sự</value>
-        <value xml:lang="zh">新建雇员职位</value>
+        <value xml:lang="zh">新建员工职位</value>
         <value xml:lang="zh-TW">新建員工職位</value>
     </property>
     <property key="HumanResNewEmplPositionFulfillment">
@@ -2232,7 +2232,7 @@
         <value xml:lang="pt-BR">Novo Preenchimento de posição de empregado</value>
         <value xml:lang="th">ตำแหน่งพนักงานที่ปฏิบัติภารกิจใหม่</value>
         <value xml:lang="vi">Thêm mới Hoàn thành vị trí nhân sự</value>
-        <value xml:lang="zh">新建该职位雇员</value>
+        <value xml:lang="zh">新建该职位员工</value>
         <value xml:lang="zh-TW">新建該職位員工</value>
     </property>
     <property key="HumanResNewEmplPositionReportingStruct">
@@ -2274,7 +2274,7 @@
         <value xml:lang="ja">新規従業員</value>
         <value xml:lang="pt-BR">Novo empregado</value>
         <value xml:lang="vi">Thêm mới Nhân sự</value>
-        <value xml:lang="zh">新建雇员</value>
+        <value xml:lang="zh">新建员工</value>
         <value xml:lang="zh-TW">新建員工</value>
     </property>
     <property key="HumanResNewEmployment">
@@ -3268,7 +3268,7 @@
         <value xml:lang="pt-BR">Listar preenchimento de posições de empregado</value>
         <value xml:lang="th">รายการตำแหน่งพนักงานที่ปฏิบัติภารกิจ</value>
         <value xml:lang="vi">Danh sách Hoàn thành vị trí nhân sự</value>
-        <value xml:lang="zh">该职位雇员列表</value>
+        <value xml:lang="zh">该职位员工列表</value>
         <value xml:lang="zh-TW">該職位員工清單</value>
     </property>
     <property key="PageTitleListEmplPositionReportingStructs">
@@ -3382,5 +3382,25 @@
         <value xml:lang="vi">Xem Đào tạo nhân sự</value>
         <value xml:lang="zh">查看个人培训</value>
         <value xml:lang="zh-TW">檢視個人教育訓練</value>
+    </property>
+    
+    <property key="AddEmployeePosition">
+        <value xml:lang="en">Add Employee Position</value>
+        <value xml:lang="zh">增加员工职位</value>
+    </property>
+    
+    <property key="AddInternalOrganization">
+        <value xml:lang="en">Add Internal Organization</value>
+        <value xml:lang="zh">增加组织机构</value>
+    </property>
+    
+    <property key="RemoveInternalOrganization">
+        <value xml:lang="en">Remove Internal Organization</value>
+        <value xml:lang="zh">删除组织机构</value>
+    </property>
+    
+    <property key="AddPerson">
+        <value xml:lang="en">Add Person</value>
+        <value xml:lang="zh">增加员工</value>
     </property>
 </resource>

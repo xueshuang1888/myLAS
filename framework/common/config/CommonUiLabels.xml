@@ -7100,7 +7100,7 @@
         <value xml:lang="ru">Следующая</value>
         <value xml:lang="th">ต่อไป</value>
         <value xml:lang="vi">Tiếp theo</value>
-        <value xml:lang="zh">下一步</value>
+        <value xml:lang="zh">下一个</value>
         <value xml:lang="zh-CN">后</value>
         <value xml:lang="zh-TW">下一步</value>
     </property>
@@ -10108,7 +10108,7 @@
         <value xml:lang="ru">Безопасность</value>
         <value xml:lang="th">ความปลอดภัย</value>
         <value xml:lang="vi">Phân quyền - Bảo mật</value>
-        <value xml:lang="zh">安全</value>
+        <value xml:lang="zh">权限管理</value>
         <value xml:lang="zh-CN">安全</value>
         <value xml:lang="zh-TW">安全</value>
     </property>
@@ -10129,7 +10129,7 @@
         <value xml:lang="ru">Код группы безопасности</value>
         <value xml:lang="th">รหัสกลุ่มความปลอดภัย</value>
         <value xml:lang="vi">Nhóm Quyền</value>
-        <value xml:lang="zh">安全组标识</value>
+        <value xml:lang="zh">角色标识</value>
         <value xml:lang="zh-TW">安全群組識別</value>
     </property>
     <property key="CommonSelect">
@@ -14395,7 +14395,7 @@
         <value xml:lang="ar">الموارد البشرية</value>
         <value xml:lang="cs">Personální</value>
         <value xml:lang="de">Personal</value>
-        <value xml:lang="en">HR</value>
+        <value xml:lang="en">System Management</value>
         <value xml:lang="es">RR.HH.</value>
         <value xml:lang="fr">Ress. hum.</value>
         <value xml:lang="hi-IN">मानव संसाधन(HR)</value>
@@ -14405,7 +14405,7 @@
         <value xml:lang="ru">HR</value>
         <value xml:lang="th">ฝ่ายบุคคล</value>
         <value xml:lang="vi">Nhân sự (HR)</value>
-        <value xml:lang="zh">人力资源</value>
+        <value xml:lang="zh">系统管理</value>
         <value xml:lang="zh-TW">人力資源</value>
     </property>
     <property key="HandheldFacility">
