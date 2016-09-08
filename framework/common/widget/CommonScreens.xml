@@ -512,7 +512,7 @@ under the License.
     <screen name="GlobalFoDecorator">
         <section>
             <actions>
-                <set field="layoutSettings.commonHeaderImageUrl" value="/images/ofbiz_logo.gif"/>
+                <set field="layoutSettings.commonHeaderImageUrl" value="/images/hy_logo.gif"/>
             </actions>
             <widgets>
                 <platform-specific>

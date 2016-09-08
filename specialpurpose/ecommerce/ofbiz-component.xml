@@ -61,7 +61,7 @@ under the License.
         server="default-server"
         location="webapp/ecommerce"
         mount-point="/ecommerce"
-        app-bar-display="false"/>
+        app-bar-display="true"/>
     <webapp name="ecomclone"
         title="eCommerce Clone"
         server="default-server"
