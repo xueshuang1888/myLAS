@@ -4716,24 +4716,9 @@
         <value xml:lang="zh">沟通对象</value>
         <value xml:lang="zh-TW">通訊與</value>
     </property>
-    <property key="PartyCompanyName">
-        <value xml:lang="ar">أوفبيز: مدير الطرف</value>
-        <value xml:lang="de">OFBiz: Akteur Manager</value>
-        <value xml:lang="en">OFBiz: Party Manager</value>
-        <value xml:lang="es">OFBiz: Gestión de participantes</value>
-        <value xml:lang="fr">OFBiz : Gestionnaire d'acteur</value>
-        <value xml:lang="hi-IN">OFBiz: पार्टी प्रबंधक</value>
-        <value xml:lang="it">OFBiz: Gestione soggetti</value>
-        <value xml:lang="ja">OFBiz: 取引先管理</value>
-        <value xml:lang="nl">OFBiz: Relatie Manager</value>
-        <value xml:lang="pt-BR">OFBiz: Gestão de participantes</value>
-        <value xml:lang="pt-PT">OFBiz:Grupo de Gestão</value>
-        <value xml:lang="ro">OFBiz: Gestiune Subiecti</value>
-        <value xml:lang="ru">OFBiz: Управление участниками</value>
-        <value xml:lang="th">OFBiz: การจัดการกลุ่มผู้ใช้</value>
-        <value xml:lang="vi">vCloudBusines: Quản lý Tác nhân (Cá nhân/Tổ chức)</value>
-        <value xml:lang="zh">OFBiz: 会员管理程序</value>
-        <value xml:lang="zh-TW">OFBiz: 團體管理</value>
+    <property key="PartyCompanyName">        
+        <value xml:lang="en">HY: Party Management</value>        
+        <value xml:lang="zh">和英: 相对方管理</value>        
     </property>
     <property key="PartyCompanyNameMissingError">
         <value xml:lang="ar">إسم الشركة مفقود</value>
@@ -4755,33 +4740,9 @@
         <value xml:lang="zh">找不到公司名称</value>
         <value xml:lang="zh-TW">找不到公司名稱</value>
     </property>
-    <property key="PartyCompanySubtitle">
-    <!--value xml:lang="ar">جزء من عائلة أوفبيز للبرمجيات الحرة</value-->
-        <value xml:lang="ar">جزء من عائلة أوفبيز للتطبيقات الحرة للتسيير</value>
-        <value xml:lang="de">Teil der Apache OFBiz Familie von Open Source Software</value>
-        <value xml:lang="en">Part of the Apache OFBiz Family of Open Source Software</value>
-    <!--value xml:lang="es">Parte de la familia "Open for Bussiness" de Software Libre</value-->
-        <value xml:lang="es">Parte de la familia de software Apache OFBiz de código abierto</value>
-        <value xml:lang="fr">Un module de la famille Apache OFBiz, logiciel libre de gestion d'entreprise.</value>
-        <value xml:lang="hi-IN">Open Source Software के Apache OFBiz परिवार का हिस्सा</value>
-        <value xml:lang="it">Un modulo della famiglia di software open source Apache OFBiz</value>
-    <!--value xml:lang="nl">Onderdeel van de Apache OFBiz'-suite</value-->
-        <value xml:lang="ja">Part of the Apache OFBiz Family of Open Source Software</value>
-        <value xml:lang="nl">Deel van de Apache OFBiz-suite van Open Source Software</value>
-        <value xml:lang="pt-BR">Parte da família OfBiz de software de fonte aberta</value>
-    <!--value xml:lang="pt-PT">Parte do Software de Fonte Aberta para Grupos Abertos Para o Negócio</value-->
-        <value xml:lang="pt-PT">Parte da família OfBiz de software de fonte aberta</value>
-    <!--value xml:lang="ro">Parte accesibila pentru Business Family of Open Source Software</valuevalue xml:lang="ro">Parte din Open for Business Family of Open Source Software</value-->
-        <value xml:lang="ro">Partea de Deschidere Pentru Afaceri Familiale din Open Source Software</value>
-    <!--value xml:lang="ru">Часть семейства ПО Apache OFBiz</valuevalue xml:lang="ru">Часть семейства "Apache OFBiz Family" программных продуктов Open Source </value-->
-        <value xml:lang="ru">Входит в состав семейства Apache OFBiz</value>
-    <!--value xml:lang="th">เป็นส่วนหนึ่งของธุรกิจแบบครอบครัวที่เป็นซอฟต์แวร์โอเพนซอส</value-->
-        <value xml:lang="th">ส่วนหนึ่งของธุรกิจแบบครอบครัวที่เป็นซอฟต์แวร์โอเพนซอส</value>
-    <!--value xml:lang="zh">开源软件OFBiz的组成部分</valuevalue xml:lang="zh">开源软件OFBiz的组成部分</value-->
-        <value xml:lang="vi">Part of the Apache OFBiz Family of Open Source Software</value>
-        <value xml:lang="zh">开源软件OFBiz家族的一部分</value>
-        <value xml:lang="zh-CN">OFBiz的一部分</value>
-        <value xml:lang="zh-TW">開源軟體OFBiz家族的一部分</value>
+    <property key="PartyCompanySubtitle">    
+        <value xml:lang="en">Part of the Apache OFBiz Family of Open Source Software</value>        
+        <value xml:lang="zh">和英企业通用开发平台的一部分</value>        
     </property>
     <property key="PartyContactAllowAddressSolicitation">
         <value xml:lang="ar">السماح بالإلتماس على العنوان</value>

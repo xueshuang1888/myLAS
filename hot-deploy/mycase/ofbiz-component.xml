@@ -37,5 +37,5 @@
         location="webapp/mycase"
         base-permission="OFBTOOLS,MYCASE"
         mount-point="/mycase"
-        app-bar-display="false"/>
+        app-bar-display="true"/>
 </ofbiz-component>

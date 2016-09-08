@@ -14863,25 +14863,9 @@
         <value xml:lang="zh">禁止浏览</value>
         <value xml:lang="zh-TW">禁止檢視</value>
     </property>
-    <property key="Party">
-        <value xml:lang="ar">طرف</value>
-        <value xml:lang="cs">Partneři</value>
-        <value xml:lang="de">Akteur</value>
+    <property key="Party">        
         <value xml:lang="en">Party</value>
-        <value xml:lang="es">Participante</value>
-        <value xml:lang="fr">Acteurs</value>
-        <value xml:lang="hi-IN">पार्टी</value>
-        <value xml:lang="it">Soggetti</value>
-        <value xml:lang="ja">取引先</value>
-        <value xml:lang="nl">Partij</value>
-        <value xml:lang="pt">Participante</value>
-        <value xml:lang="ro">Subiecti</value>
-        <value xml:lang="ru">Участник</value>
-        <value xml:lang="th">กลุ่มผู้ใช้</value>
-        <value xml:lang="vi">Cá nhân - Tổ chức</value>
-        <value xml:lang="zh">会员</value>
-        <value xml:lang="zh-CN">团体</value>
-        <value xml:lang="zh-TW">團體</value>
+        <value xml:lang="zh">相对方</value>
     </property>
     <property key="PartyComponentDescription">
         <value xml:lang="ar">العملاء, الموردين, إدارة الموظفين, الإتصالات, التقسيمات</value>
@@ -15021,22 +15005,17 @@
     
     <property key="MyTemplate">
         <value xml:lang="en">MyTemplate</value>
-        <value xml:lang="zh">范本管理</value>
+        <value xml:lang="zh">范本</value>
     </property>
     
     <property key="MyContract">
         <value xml:lang="en">MyContract</value>
-        <value xml:lang="zh">合同管理</value>
+        <value xml:lang="zh">合同</value>
     </property>
     
     <property key="MyCase">
         <value xml:lang="en">MyCase</value>
-        <value xml:lang="zh">案件管理</value>
-    </property>
-    
-    <property key="MyParty">
-        <value xml:lang="en">MyParty</value>
-        <value xml:lang="zh">相对方管理</value>
+        <value xml:lang="zh">案件</value>
     </property>
     
     <property key="ar">
