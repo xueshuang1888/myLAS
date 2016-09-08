@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/ofbiz-properties.xsd">
+    <property key="MyCaseApplication">
+        <value xml:lang="en">Case Management</value>
+        <value xml:lang="zh">案件管理</value>        
+    </property>
+    <property key="MyCaseCompanyName">
+        <value xml:lang="en">HY: Case Management</value>
+        <value xml:lang="zh">和英：案件管理</value>        
+    </property>
+    <property key="MyCaseCompanySubtitle">
+        <value xml:lang="en">Part of the HY EGDP Family</value>
+        <value xml:lang="zh">和英企业通用开发平台的组成部分</value>        
+    </property>
+    <property key="MyCaseViewPermissionError">
+        <value xml:lang="en">You are not allowed to view this page.</value>
+        <value xml:lang="zh">不允许你浏览这个页面。</value>        
+    </property>
+</resource>

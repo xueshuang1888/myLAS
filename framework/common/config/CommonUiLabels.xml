@@ -15018,6 +15018,27 @@
         <value xml:lang="zh">工作流管理</value>
         <value xml:lang="zh-CN">工作流管理</value>
     </property>
+    
+    <property key="MyTemplate">
+        <value xml:lang="en">MyTemplate</value>
+        <value xml:lang="zh">范本管理</value>
+    </property>
+    
+    <property key="MyContract">
+        <value xml:lang="en">MyContract</value>
+        <value xml:lang="zh">合同管理</value>
+    </property>
+    
+    <property key="MyCase">
+        <value xml:lang="en">MyCase</value>
+        <value xml:lang="zh">案件管理</value>
+    </property>
+    
+    <property key="MyParty">
+        <value xml:lang="en">MyParty</value>
+        <value xml:lang="zh">相对方管理</value>
+    </property>
+    
     <property key="ar">
         <value xml:lang="ar">عربية</value>
         <value xml:lang="cs">Arabština</value>

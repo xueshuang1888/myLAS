@@ -76,12 +76,14 @@ under the License.
         server="default-server"
         location="webapp/catalog"
         base-permission="OFBTOOLS,CATALOG"
-        mount-point="/catalog"/>
+        mount-point="/catalog"
+        app-bar-display="false"/>
     <webapp name="facility"
         title="Facility"
         description="FacilityComponentDescription"
         server="default-server"
         location="webapp/facility"
         base-permission="OFBTOOLS,FACILITY"
-        mount-point="/facility"/>
+        mount-point="/facility"
+        app-bar-display="false"/>
 </ofbiz-component>
