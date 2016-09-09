@@ -78,6 +78,7 @@ under the License.
         base-permission="OFBTOOLS,CATALOG"
         mount-point="/catalog"
         app-bar-display="false"/>
+        
     <webapp name="facility"
         title="Facility"
         description="FacilityComponentDescription"

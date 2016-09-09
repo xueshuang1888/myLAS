@@ -971,38 +971,12 @@
         <value xml:lang="zh-TW">無權上傳圖片</value>
     </property>
     <property key="ContentContentManager">
-        <value xml:lang="ar">تطبيق تسيير المحتوى</value>
-        <value xml:lang="da">Indholdsadministrator</value>
-        <value xml:lang="de">Inhaltsverwaltung Anwendung</value>
         <value xml:lang="en">Content Manager</value>
-        <value xml:lang="es">Aplicación de Administración de Contenidos</value>
-        <value xml:lang="fr">Application de gestion de contenu</value>
-        <value xml:lang="it">Gestione contenuti</value>
-        <value xml:lang="ja">コンテンツ管理</value>
-        <value xml:lang="nl">Content Manager</value>
-        <value xml:lang="pt">Gerenciador de conteúdo</value>
-        <value xml:lang="ro">Aplicatie Gestiune Continuturi</value>
-        <value xml:lang="th">หัวข้อการจัดการที่นำไปประยุกต์ใช้</value>
-        <value xml:lang="vi">Nhà quản trị nội dung</value>
-        <value xml:lang="zh">内容管理应用程序</value>
-        <value xml:lang="zh-TW">內容管理應用程式</value>
+        <value xml:lang="zh">内容管理</value>
     </property>
     <property key="ContentContentManagerApplication">
-        <value xml:lang="ar">تطبيق تسيير المحتوى</value>
-        <value xml:lang="da">Indholdsadministraton applikation</value>
-        <value xml:lang="de">Inhaltsverwaltung Anwendung</value>
         <value xml:lang="en">Content Manager Application</value>
-        <value xml:lang="es">Aplicación de Administración de Contenidos</value>
-        <value xml:lang="fr">Application de gestion de contenu</value>
-        <value xml:lang="it">Applicazione gestione contenuti</value>
-        <value xml:lang="ja">コンテンツ管理業務</value>
-        <value xml:lang="nl">Content Manager Applicatie</value>
-        <value xml:lang="pt">Aplicativo do Gerenciador de conteúdo</value>
-        <value xml:lang="ro">Aplicatie Gestiune Continuturi</value>
-        <value xml:lang="th">หัวข้อการจัดการที่นำไปประยุกต์ใช้</value>
-        <value xml:lang="vi">Ứng dụng quản trị nội dung</value>
         <value xml:lang="zh">内容管理应用程序</value>
-        <value xml:lang="zh-TW">內容管理應用程式</value>
     </property>
     <property key="ContentContentNoAccessToUploadImage">
         <value xml:lang="en">no access to upload image</value>

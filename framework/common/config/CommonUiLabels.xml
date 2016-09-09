@@ -14998,9 +14998,8 @@
         <value xml:lang="zh-TW">工作投入</value>
     </property>
     <property key="Activiti">
-        <value xml:lang="en">Activiti</value>
+        <value xml:lang="en">Workflow Management</value>
         <value xml:lang="zh">工作流管理</value>
-        <value xml:lang="zh-CN">工作流管理</value>
     </property>
     
     <property key="MyTemplate">

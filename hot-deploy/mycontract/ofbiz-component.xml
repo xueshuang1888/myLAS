@@ -36,5 +36,6 @@
         server="default-server"
         location="webapp/mycontract"
         base-permission="OFBTOOLS,MYCONTRACT"
-        mount-point="/mycontract"/>
+        mount-point="/mycontract"
+        position="4"/>
 </ofbiz-component>

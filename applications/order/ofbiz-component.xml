@@ -63,6 +63,6 @@ under the License.
         location="webapp/ordermgr"
         base-permission="OFBTOOLS,ORDERMGR"
         mount-point="/ordermgr"
-        app-bar-display="false"/>
+        app-bar-display="true"/>
 </ofbiz-component>
 
