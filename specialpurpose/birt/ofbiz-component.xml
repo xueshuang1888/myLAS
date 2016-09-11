@@ -35,7 +35,7 @@ under the License.
         location="webapp/accounting"
         base-permission="OFBTOOLS,ACCOUNTING"
         mount-point="/accounting"
-        app-bar-display="false"/>
+        app-bar-display="true"/>
         
     <webapp name="facility"
         title="Facility"
