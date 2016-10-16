@@ -93,6 +93,7 @@ under the License.
 
     <target name="jar" depends="classes">
         <main-jar/>
+    	<test-jar/>
     </target>
 
     <!-- ================================================================== -->

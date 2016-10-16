@@ -7100,7 +7100,7 @@
         <value xml:lang="ru">Следующая</value>
         <value xml:lang="th">ต่อไป</value>
         <value xml:lang="vi">Tiếp theo</value>
-        <value xml:lang="zh">下一步</value>
+        <value xml:lang="zh">下一个</value>
         <value xml:lang="zh-CN">后</value>
         <value xml:lang="zh-TW">下一步</value>
     </property>
@@ -10108,7 +10108,7 @@
         <value xml:lang="ru">Безопасность</value>
         <value xml:lang="th">ความปลอดภัย</value>
         <value xml:lang="vi">Phân quyền - Bảo mật</value>
-        <value xml:lang="zh">安全</value>
+        <value xml:lang="zh">权限管理</value>
         <value xml:lang="zh-CN">安全</value>
         <value xml:lang="zh-TW">安全</value>
     </property>
@@ -10129,7 +10129,7 @@
         <value xml:lang="ru">Код группы безопасности</value>
         <value xml:lang="th">รหัสกลุ่มความปลอดภัย</value>
         <value xml:lang="vi">Nhóm Quyền</value>
-        <value xml:lang="zh">安全组标识</value>
+        <value xml:lang="zh">角色标识</value>
         <value xml:lang="zh-TW">安全群組識別</value>
     </property>
     <property key="CommonSelect">
@@ -14395,7 +14395,7 @@
         <value xml:lang="ar">الموارد البشرية</value>
         <value xml:lang="cs">Personální</value>
         <value xml:lang="de">Personal</value>
-        <value xml:lang="en">HR</value>
+        <value xml:lang="en">System Management</value>
         <value xml:lang="es">RR.HH.</value>
         <value xml:lang="fr">Ress. hum.</value>
         <value xml:lang="hi-IN">मानव संसाधन(HR)</value>
@@ -14405,7 +14405,7 @@
         <value xml:lang="ru">HR</value>
         <value xml:lang="th">ฝ่ายบุคคล</value>
         <value xml:lang="vi">Nhân sự (HR)</value>
-        <value xml:lang="zh">人力资源</value>
+        <value xml:lang="zh">系统管理</value>
         <value xml:lang="zh-TW">人力資源</value>
     </property>
     <property key="HandheldFacility">
@@ -14863,25 +14863,9 @@
         <value xml:lang="zh">禁止浏览</value>
         <value xml:lang="zh-TW">禁止檢視</value>
     </property>
-    <property key="Party">
-        <value xml:lang="ar">طرف</value>
-        <value xml:lang="cs">Partneři</value>
-        <value xml:lang="de">Akteur</value>
+    <property key="Party">        
         <value xml:lang="en">Party</value>
-        <value xml:lang="es">Participante</value>
-        <value xml:lang="fr">Acteurs</value>
-        <value xml:lang="hi-IN">पार्टी</value>
-        <value xml:lang="it">Soggetti</value>
-        <value xml:lang="ja">取引先</value>
-        <value xml:lang="nl">Partij</value>
-        <value xml:lang="pt">Participante</value>
-        <value xml:lang="ro">Subiecti</value>
-        <value xml:lang="ru">Участник</value>
-        <value xml:lang="th">กลุ่มผู้ใช้</value>
-        <value xml:lang="vi">Cá nhân - Tổ chức</value>
-        <value xml:lang="zh">会员</value>
-        <value xml:lang="zh-CN">团体</value>
-        <value xml:lang="zh-TW">團體</value>
+        <value xml:lang="zh">相对方</value>
     </property>
     <property key="PartyComponentDescription">
         <value xml:lang="ar">العملاء, الموردين, إدارة الموظفين, الإتصالات, التقسيمات</value>
@@ -15014,10 +14998,25 @@
         <value xml:lang="zh-TW">工作投入</value>
     </property>
     <property key="Activiti">
-        <value xml:lang="en">Activiti</value>
+        <value xml:lang="en">Workflow Management</value>
         <value xml:lang="zh">工作流管理</value>
-        <value xml:lang="zh-CN">工作流管理</value>
     </property>
+    
+    <property key="MyTemplate">
+        <value xml:lang="en">MyTemplate</value>
+        <value xml:lang="zh">范本</value>
+    </property>
+    
+    <property key="MyContract">
+        <value xml:lang="en">MyContract</value>
+        <value xml:lang="zh">合同</value>
+    </property>
+    
+    <property key="MyCase">
+        <value xml:lang="en">MyCase</value>
+        <value xml:lang="zh">案件</value>
+    </property>
+    
     <property key="ar">
         <value xml:lang="ar">عربية</value>
         <value xml:lang="cs">Arabština</value>

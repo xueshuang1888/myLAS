@@ -120,7 +120,7 @@ var rawdata = [
     if(node.attr('rel')=='Y'){ 
     var items = {
         EmpPosition: { 
-            label: "Add Employee Position",
+            label: "${uiLabelMap.AddEmployeePosition}",
             action: function (NODE, TREE_OBJ) {
                 var dataSet = {};
                 dataSet = {"partyId" : NODE.attr("id")};
@@ -138,7 +138,7 @@ var rawdata = [
             }
         },
         AddIntOrg: { 
-            label: "Add Internal Organization",
+            label: "${uiLabelMap.AddInternalOrganization}",
             action: function (NODE, TREE_OBJ) {
                 var dataSet = {};
                 dataSet = {"headpartyId" : NODE.attr("id")};
@@ -156,7 +156,7 @@ var rawdata = [
             }
         },
         RemoveIntOrg: { 
-            label: "Remove Internal Organization",
+            label: "${uiLabelMap.RemoveInternalOrganization}",
             action: function (NODE, TREE_OBJ) {
                 var dataSet = {};
                 dataSet = {"partyId" : NODE.attr("id"),"parentpartyId" : $.jstree._focused()._get_parent(node).attr("id")};
@@ -177,7 +177,7 @@ var rawdata = [
     if(node.attr('rel')=='N'){ 
         var items = {
             AddPerson: { 
-                label: "Add Person",
+                label: "${uiLabelMap.AddPerson}",
                 action: function (NODE, TREE_OBJ) {
                     var dataSet = {};
                     dataSet = {"emplPositionId" : NODE.attr("id")};

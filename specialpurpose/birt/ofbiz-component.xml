@@ -34,21 +34,26 @@ under the License.
         server="default-server"
         location="webapp/accounting"
         base-permission="OFBTOOLS,ACCOUNTING"
-        mount-point="/accounting"/>
+        mount-point="/accounting"
+        app-bar-display="true"/>
+        
     <webapp name="facility"
         title="Facility"
         description="FacilityComponentDescription"
         server="default-server"
         location="webapp/facility"
         base-permission="OFBTOOLS,FACILITY"
-        mount-point="/facility"/>
+        mount-point="/facility"
+        app-bar-display="false"/>
+        
     <webapp name="order"
         title="Order"
         description="OrderComponentDescription"
         server="default-server"
         location="webapp/ordermgr"
         base-permission="OFBTOOLS,ORDERMGR"
-        mount-point="/ordermgr"/>
+        mount-point="/ordermgr"
+        app-bar-display="true"/>
 
     <webapp name="birt"
         title="BIRT"

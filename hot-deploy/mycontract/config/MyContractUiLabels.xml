@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/ofbiz-properties.xsd">
+    <property key="MyContractApplication">
+        <value xml:lang="en">Contract Management</value>
+        <value xml:lang="zh">合同管理</value>
+    </property>
+    <property key="MyContractCompanyName">
+        <value xml:lang="en">HY: MyContract</value>
+        <value xml:lang="zh">和英：合同管理</value>
+    </property>
+    <property key="MyContractCompanySubtitle">
+        <value xml:lang="en">Part of the HY EGDP Family</value>        
+        <value xml:lang="zh">和英企业通用开发平台的组成部分</value>
+    </property>
+    <property key="MyContractViewPermissionError">
+        <value xml:lang="en">You are not allowed to view this page.</value>
+        <value xml:lang="zh">不允许你浏览这个页面。</value>
+    </property>
+</resource>

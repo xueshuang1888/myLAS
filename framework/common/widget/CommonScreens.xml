@@ -174,6 +174,8 @@ under the License.
                         <set field="appbarCloseTemplateLocation" from-field="layoutSettings.VT_NAV_CLOSE_TMPLT[0]" />
                         <set field="messagesTemplateLocation" from-field="layoutSettings.VT_MSG_TMPLT_LOC[0]" />
                         <set field="layoutSettings.suppressTab" value="ofbizsetup"/><!-- diseable ofbiz setup by default -->
+                        <set field="layoutSettings.commonHeaderImageUrl" value="/images/hy_logo.gif" global="true"/>
+                        
                     </actions>
                     <widgets />
                 </section>
@@ -510,7 +512,7 @@ under the License.
     <screen name="GlobalFoDecorator">
         <section>
             <actions>
-                <set field="layoutSettings.commonHeaderImageUrl" value="/images/ofbiz_logo.gif"/>
+                <set field="layoutSettings.commonHeaderImageUrl" value="/images/hy_logo.gif"/>
             </actions>
             <widgets>
                 <platform-specific>

@@ -41,5 +41,6 @@ under the License.
         location="webapp/humanres"
         base-permission="OFBTOOLS,HUMANRES"
         mount-point="/humanres"
-        app-bar-display="true"/>
+        app-bar-display="true"
+        position="6"/>
 </ofbiz-component>
